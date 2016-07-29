@@ -1,21 +1,17 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:      pygments
-
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
+markdown:         kramdown
+highlighter:      rouge
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /
+title:            Geometría
+tagline:          'LIMA, UAEH, 2016'
+description:      'LIMA, UAEH, 2016'
+url:              "http://rvf0068.gmail.com/my-hyde"
+baseurl:          "/my-hyde"
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Rafael Villarroel'
+  url:            https://twitter.com/rvf0068
 
 paginate:         5
 
@@ -23,4 +19,6 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/rvf0068/my-hyde
+
+gems:             [jekyll-paginate]
