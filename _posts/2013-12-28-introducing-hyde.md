@@ -7,6 +7,17 @@ Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a pro
 
 ### Built on Poole
 
+Inline: $$a+b$$
+
+Display:
+
+$$a+b$$
+
+Inline: \\(x^2\\)
+
+Display: \\[x^2\\]
+
+
 Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by [@mdo](https://twitter.com/mdo). Poole, and every theme built on it (like Hyde here) includes the following:
 
 * Complete Jekyll setup included (layouts, config, [404](/404), [RSS feed](/atom.xml), posts, and [example page](/about))
