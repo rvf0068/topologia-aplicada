@@ -22,3 +22,5 @@ github:
   repo:           https://github.com/rvf0068/my-hyde
 
 gems:             [jekyll-paginate]
+
+language:         spanish
