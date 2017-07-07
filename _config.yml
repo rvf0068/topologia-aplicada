@@ -3,11 +3,11 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Geometría
-tagline:          'LIMA, UAEH, 2016'
-description:      'LIMA, UAEH, 2016'
-url:              "http://rvf0068.gmail.com/my-hyde"
-baseurl:          "/my-hyde"
+title:            Sistemas discretos
+tagline:          'LIMA, UAEH, 2017'
+description:      'LIMA, UAEH, 2017'
+url:              "http://rvf0068.github.com/discretos"
+baseurl:          "/discretos"
 
 author:
   name:           'Rafael Villarroel'
@@ -19,7 +19,7 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/rvf0068/my-hyde
+  repo:           https://github.com/rvf0068/sistemas-discretos
 
 gems:             [jekyll-paginate]
 
