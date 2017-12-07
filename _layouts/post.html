@@ -5,13 +5,36 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
+
+  <!-- Using https://github.com/jekyll/jekyll/issues/633#issuecomment-15038168 -->
+  {% assign filename = page.url | replace_first: '/', '' | replace: '/', '-'  | replace: '.html', '.pdf' %}
+  <a href="{{ site.github.repo }}/raw/gh-pages/pdfs/{{ filename }}">
+    {% case site.language %}
+      {% when 'spanish' %}
+         La presentación en pdf
+      {% else %}
+         Pdf presentation
+    {% endcase %}
+  </a>
+
   {{ content }}
 
   {% include share_page.html %}
 </div>
 
+{% if site.disqus %}
+  {% include disqus.html %}
+{% endif %}
+
 <div class="related">
-  <h2>{% if site.language == "spanish" %} Relacionados {% else %} Related Posts {% endif %}</h2>
+  <h2>
+    {% case site.language %}
+      {% when 'spanish' %}
+         Relacionados
+      {% else %}
+         Related Posts
+    {% endcase %}
+  </h2>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
       <li>
