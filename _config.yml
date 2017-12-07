@@ -1,7 +1,3 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      rouge
-
 # Setup
 title:            Sistemas discretos
 tagline:          'LIMA, UAEH, 2017'
@@ -16,11 +12,11 @@ author:
 paginate:         5
 
 # Custom vars
-version:          2.1.0
-
 github:
-  repo:           https://github.com/rvf0068/sistemas-discretos
+  repo:           https://github.com/rvf0068/discretos
 
-gems:             [jekyll-paginate]
+plugins:          [jekyll-paginate]
 
 language:         spanish
+
+disqus:           mateclases.disqus.com/embed.js
