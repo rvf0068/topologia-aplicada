@@ -20,3 +20,6 @@ plugins:          [jekyll-paginate]
 language:         spanish
 
 disqus:           mateclases.disqus.com/embed.js
+
+# see https://github.com/github/pages-gem/issues/399#issuecomment-301827749
+github:           [metadata]
