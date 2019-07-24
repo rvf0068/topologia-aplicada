@@ -1,9 +1,9 @@
 # Setup
-title:            Sistemas discretos
-tagline:          'LIMA, UAEH, 2017'
-description:      'LIMA, UAEH, 2017'
-url:              "http://rvf0068.github.com/discretos"
-baseurl:          "/discretos"
+title:            Introducción a la teoría de gráficas
+tagline:          'LIMA, UAEH, 2019'
+description:      'LIMA, UAEH, 2019'
+url:              "http://rvf0068.github.com/graficas"
+baseurl:          "/graficas"
 
 author:
   name:           'Rafael Villarroel'
@@ -13,7 +13,7 @@ paginate:         5
 
 # Custom vars
 github:
-  repo:           https://github.com/rvf0068/discretos
+  repo:           https://github.com/rvf0068/graficas
 
 plugins:          [jekyll-paginate]
 
