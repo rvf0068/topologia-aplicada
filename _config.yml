@@ -1,9 +1,9 @@
 # Setup
-title:            Introducción a la teoría de gráficas
-tagline:          'LIMA, UAEH, 2019'
-description:      'LIMA, UAEH, 2019'
-url:              "http://rvf0068.github.com/graficas"
-baseurl:          "/graficas"
+title:            Topología aplicada
+tagline:          'LIMA, UAEH, 2021'
+description:      'LIMA, UAEH, 2021'
+url:              "http://rvf0068.github.com/topologia-aplicada"
+baseurl:          "/topologia-aplicada"
 
 author:
   name:           'Rafael Villarroel'
@@ -13,7 +13,7 @@ paginate:         5
 
 # Custom vars
 github:
-  repo:           https://github.com/rvf0068/graficas
+  repo:           https://github.com/rvf0068/topologia-aplicada
 
 plugins:          [jekyll-paginate]
 
