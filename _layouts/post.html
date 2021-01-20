@@ -8,7 +8,8 @@ layout: default
 
   <!-- Using https://github.com/jekyll/jekyll/issues/633#issuecomment-15038168 -->
   {% assign filename = page.url | replace_first: '/', '' | replace: '/', '-'  | replace: '.html', '.pdf' %}
-  <a href="{{ site.github.repo }}/raw/gh-pages/pdfs/{{ filename }}">
+  <!-- <a href="{{ site.github.repo }}/raw/gh-pages/pdfs/{{ filename }}"> -->
+  <a href="{{ site.thepage }}/raw/gh-pages/pdfs/{{ filename }}">
     {% case site.language %}
       {% when 'spanish' %}
          La presentación en pdf
