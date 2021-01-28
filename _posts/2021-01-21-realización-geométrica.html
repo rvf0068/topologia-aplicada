@@ -16,7 +16,15 @@ categories:
 <h3 id="org361d3d9"><span class="section-number-3">1.1</span> Idea general</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
-A cada complejo simplicial \(\Delta\) le queremos asociar un espacio topológico que denotaremos con \(|\Delta|\), que se llama su <b>realización geométrica</b>. Vamos a considerar un número \(n\) suficientemente grande, y entonces \(|\Delta|\) será un subespacio de \(\mathbb{R}^{n}\). Por cada simplejo de dimensión 0, ponemos un punto en \(\mathbb{R}^{n}\). Por cada simplejo de dimensión \(1\), ponemos un segmento de recta entre los puntos del simplejo. Por cada simplejo de dimensión 2, ponemos un triángulo entre sus vértices, etc. 
+A cada complejo simplicial \(\Delta\) le queremos asociar un espacio topológico que denotaremos con \(|\Delta|\), que se llama su <b>realización geométrica</b>.
+</p>
+
+<p>
+Vamos a considerar un número \(n\) suficientemente grande, y entonces \(|\Delta|\) será un subespacio de \(\mathbb{R}^{n}\).
+</p>
+
+<p>
+Por cada simplejo de dimensión 0, ponemos un punto en \(\mathbb{R}^{n}\). Por cada simplejo de dimensión \(1\), ponemos un segmento de recta entre los puntos del simplejo. Por cada simplejo de dimensión 2, ponemos un triángulo entre sus vértices, etc. 
 </p>
 </div>
 </div>
@@ -44,20 +52,27 @@ A cada complejo simplicial \(\Delta\) le queremos asociar un espacio topológico
 <h3 id="orgcb713e9"><span class="section-number-3">2.1</span> Independencia afín</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
-Decimos que el conjunto \(\{x_{0},x_{1},\ldots,x_{k}\}\) es <b>afínmente independiente</b>
-si \(\{x_{1}-x_{0},x_{2}-x_{0},\ldots,x_{k}-x_{0}\}\) es <b>linealmente independiente</b>. Por convención, todo conjunto con un solo punto es afínmente independiente.
+Decimos que el conjunto \(\{v_{0},v_{1},\ldots,v_{k}\}\subseteq \mathbb{R}^{n}\) es <b>afínmente independiente</b>
+si \(\{v_{1}-v_{0},v_{2}-v_{0},\ldots,v_{k}-v_{0}\}\subseteq \mathbb{R}^{n}\) es <b>linealmente independiente</b>. Por convención, todo conjunto con un solo punto es afínmente independiente.
 </p>
 
 <p>
-<b>Tarea</b> Demostrar que la propiedad de que un conjunto sea afínmente independiente no depende del punto escogido como \(x_{0}\).
+Cuando un conjunto de puntos en \(\mathbb{R}^{n}\) es afínmente independiente, también se dice que los puntos están en <b>posición general</b>.
 </p>
 
 <p>
-<b>Ejemplo</b> En \(\mathbb{R}^{3}\), el conjunto \(\{(0,0,0),(1,0,0),(0,1,0),(0,0,1)\}\) es afínmente independiente.
+<b>Tarea</b>
+Demuestra que el conjunto \(\{v_{0},v_{1},\ldots,v_{k}\}\) es afínmente independiente si y solo si \(\sum_{i=0}^{k}t_{i}v_{i}=0\) y \(\sum_{i=0}^{k}t_{i}=0\) implican que \(t_{0}=t_{1}=\cdots=t_{k}=0\). Por lo tanto, la propiedad de que un conjunto sea afínmente independiente no depende del punto escogido como \(v_{0}\).
 </p>
 
 <p>
-<b>Tarea</b> Demuestra que si un conjunto no es afínmente independiente, pasa uno de:
+<b>Ejemplo</b>
+En \(\mathbb{R}^{3}\), el conjunto \(\{(0,0,0),(1,0,0),(0,1,0),(0,0,1)\}\) es afínmente independiente.
+</p>
+
+<p>
+<b>Tarea</b>
+Demuestra que si un conjunto no es afínmente independiente, pasa uno de:
 </p>
 <ul class="org-ul">
 <li>hay tres puntos colineales</li>
@@ -71,12 +86,20 @@ si \(\{x_{1}-x_{0},x_{2}-x_{0},\ldots,x_{k}-x_{0}\}\) es <b>linealmente independ
 <h3 id="orga98cdab"><span class="section-number-3">2.2</span> Simplejo geométrico</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
-Consideremos el conjunto \(\sigma=\{x_{0},x_{1},\ldots,x_{k}\}\subseteq \mathbb{R}^{n}\) que sea afínmente independiente. El <b>simplejo geométrico generado por \(\sigma\)</b> es el subespacio:
-\(|\sigma|=\{\sum_{i=0}^{k}t_{i}x_{i}\mid t_{i}\geq 0, \sum_{i=0}^{k}t_{i}=1\}\subseteq \mathbb{R}^{n}\).
+Consideremos el conjunto \(A=\{v_{0},v_{1},\ldots,v_{k}\}\subseteq \mathbb{R}^{n}\) que sea afínmente independiente. El <b>simplejo geométrico generado por \(A\)</b> es el subespacio: \(|A|=\{\sum_{i=0}^{k}t_{i}v_{i}\mid t_{i}\geq 0, \sum_{i=0}^{k}t_{i}=1\}\subseteq \mathbb{R}^{n}\).
 </p>
 
 <p>
-Por ejemplo, el simplejo geométrico generado por un punto es el mismo punto. Si \(\sigma=\{x_{0},x_{1}\}\), entonces \(|\sigma|\) es el segmento de recta de \(x_{0}\) a \(x_{1}\). Si \(\sigma=\{x_{0},x_{1},x_{2}\}\), entonces \(|\sigma|\) es el triángulo con vértices \(x_{0},x_{1},x_{2}\), etc.
+Por ejemplo, el simplejo geométrico generado por un punto es el mismo punto. Si \(A=\{v_{0},v_{1}\}\), entonces \(|A|\) es el segmento de recta de \(v_{0}\) a \(v_{1}\). Si \(A=\{v_{0},v_{1},v_{2}\}\), entonces \(|A|\) es el triángulo con vértices \(v_{0},v_{1},v_{2}\), etc.
+</p>
+
+<p>
+Todo elemento de la forma \(\sum_{i=0}^{k}t_{i}v_{i}\)  con \(t_{i}\geq0\)  y \(\sum_{i=0}^{k}t_{i}=1\), se llama una <b>combinación convexa</b> de \(v_{0},v_{1},\ldots,v_{k}\).
+</p>
+
+<p>
+<b>Tarea</b>
+Demuestra que si \(\alpha\in|A|\), los números \(t_{i}\) tales que \(\alpha=\sum_{i=0}^{k}t_{i}v_{i}\) están unívocamente determinados.
 </p>
 </div>
 </div>
@@ -84,9 +107,39 @@ Por ejemplo, el simplejo geométrico generado por un punto es el mismo punto. Si
 <div id="outline-container-org054c12e" class="outline-3">
 <h3 id="org054c12e"><span class="section-number-3">2.3</span> Realización geométrica</h3>
 <div class="outline-text-3" id="text-2-3">
+</div>
+<ol class="org-ol">
+<li><a id="orgb991bb4"></a>Vértices de un complejo simplicial<br />
+<div class="outline-text-4" id="text-2-3-1">
 <p>
-Sea \(\Delta\) un complejo simplicial. Sea \(\Delta_{0}=\cup \Delta^{(0)}\). Sea \(\phi\colon \Delta_{0}\to \mathbb{R}^{n}\) una función tal que \(\phi(\Delta_{0})\) sea afínmente independiente (por ejemplo, si \(k+1=|\Delta_{0}|\), podemos mandar al primer vértice al \(0\in \mathbb{R}^{k}\)  y los restantes elementos de \(\Delta_{0}\) a la base canónica.). Entonces \(|\Delta|_{\phi}=\cup_{\sigma\in\Delta}|\sigma|_{\phi}\), donde \(|\sigma|_{\phi}\) es el simplejo geométrico generado por \(\phi(\sigma)\).
+Si \(\Delta\) es un complejo simplicial en \(X\), denotamos con \(\Delta_{0}=\{x\in X\mid \{x\}\in \Delta\}\). Los elementos de \(\Delta_{0}\) se llaman <b>vértices</b> de \(\Delta\).
 </p>
 </div>
+</li>
+
+<li><a id="org9516eea"></a>Encaje afín<br />
+<div class="outline-text-4" id="text-2-3-2">
+<p>
+Sea \(\Delta\) un complejo simplicial. Decimos que  \(\phi\colon \Delta_{0}\to\mathbb{R}^{n}\) es un <b>encaje afín</b> si \(\phi\) es inyectiva y \(\phi(\sigma)\) es afínmente independiente para todo \(\sigma\in\Delta\).
+</p>
+</div>
+</li>
+
+<li><a id="org7c5732b"></a>Ejemplo.<br />
+<div class="outline-text-4" id="text-2-3-3">
+<p>
+Si \(\phi\) es inyectiva y \(\phi(\Delta_{0})\) es afínmente independiente, entonces \(\phi\) es un encaje afin.
+</p>
+</div>
+</li>
+
+<li><a id="org316e517"></a>Realización respecto a un encaje<br />
+<div class="outline-text-4" id="text-2-3-4">
+<p>
+Sea \(\Delta\) un complejo simplicial. Sea \(\phi\colon \Delta_{0}\to \mathbb{R}^{n}\) un encaje afín. Entonces se define \(|\Delta|_{\phi}=\cup_{\sigma\in\Delta}|\sigma|_{\phi}\), donde, para \(\sigma=\{x_{0},x_{1},\ldots,x_{k}\}\in \Delta\), se tiene que \(|\sigma|_{\phi}\) es el simplejo geométrico generado por \(\phi(\sigma)=\{\phi(x_{0}),\phi(x_{1}),\ldots,\phi(x_{k})\}\).
+</p>
+</div>
+</li>
+</ol>
 </div>
 </div>
