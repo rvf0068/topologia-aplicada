@@ -52,8 +52,8 @@ Por cada simplejo de dimensión 0, ponemos un punto en \(\mathbb{R}^{n}\). Por c
 <h3 id="orgcb713e9"><span class="section-number-3">2.1</span> Independencia afín</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
-Decimos que el conjunto \(\{v_{0},v_{1},\ldots,v_{k}\}\subseteq \mathbb{R}^{n}\) es <b>afínmente independiente</b>
-si \(\{v_{1}-v_{0},v_{2}-v_{0},\ldots,v_{k}-v_{0}\}\subseteq \mathbb{R}^{n}\) es <b>linealmente independiente</b>. Por convención, todo conjunto con un solo punto es afínmente independiente.
+Decimos que el conjunto \(\{v_{0},v_{1},\ldots,v_{d}\}\subseteq \mathbb{R}^{n}\) es <b>afínmente independiente</b>
+si \(\{v_{1}-v_{0},v_{2}-v_{0},\ldots,v_{d}-v_{0}\}\subseteq \mathbb{R}^{n}\) es <b>linealmente independiente</b>. Por convención, todo conjunto con un solo punto es afínmente independiente.
 </p>
 
 <p>
@@ -62,7 +62,7 @@ Cuando un conjunto de puntos en \(\mathbb{R}^{n}\) es afínmente independiente, 
 
 <p>
 <b>Tarea</b>
-Demuestra que el conjunto \(\{v_{0},v_{1},\ldots,v_{k}\}\) es afínmente independiente si y solo si \(\sum_{i=0}^{k}t_{i}v_{i}=0\) y \(\sum_{i=0}^{k}t_{i}=0\) implican que \(t_{0}=t_{1}=\cdots=t_{k}=0\). Por lo tanto, la propiedad de que un conjunto sea afínmente independiente no depende del punto escogido como \(v_{0}\).
+Demuestra que el conjunto \(\{v_{0},v_{1},\ldots,v_{d}\}\) es afínmente independiente si y solo si \(\sum_{i=0}^{d}t_{i}v_{i}=0\) y \(\sum_{i=0}^{d}t_{i}=0\) implican que \(t_{0}=t_{1}=\cdots=t_{d}=0\). Por lo tanto, la propiedad de que un conjunto sea afínmente independiente no depende del punto escogido como \(v_{0}\).
 </p>
 
 <p>
@@ -86,7 +86,7 @@ Demuestra que si un conjunto no es afínmente independiente, pasa uno de:
 <h3 id="orga98cdab"><span class="section-number-3">2.2</span> Simplejo geométrico</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
-Consideremos el conjunto \(A=\{v_{0},v_{1},\ldots,v_{k}\}\subseteq \mathbb{R}^{n}\) que sea afínmente independiente. El <b>simplejo geométrico generado por \(A\)</b> es el subespacio: \(|A|=\{\sum_{i=0}^{k}t_{i}v_{i}\mid t_{i}\geq 0, \sum_{i=0}^{k}t_{i}=1\}\subseteq \mathbb{R}^{n}\).
+Consideremos el conjunto \(A=\{v_{0},v_{1},\ldots,v_{d}\}\subseteq \mathbb{R}^{n}\) que sea afínmente independiente. El <b>simplejo geométrico generado por \(A\)</b> es el subespacio: \(|A|=\{\sum_{i=0}^{d}t_{i}v_{i}\mid t_{i}\geq 0, \sum_{i=0}^{d}t_{i}=1\}\subseteq \mathbb{R}^{n}\).
 </p>
 
 <p>
@@ -94,12 +94,12 @@ Por ejemplo, el simplejo geométrico generado por un punto es el mismo punto. Si
 </p>
 
 <p>
-Todo elemento de la forma \(\sum_{i=0}^{k}t_{i}v_{i}\)  con \(t_{i}\geq0\)  y \(\sum_{i=0}^{k}t_{i}=1\), se llama una <b>combinación convexa</b> de \(v_{0},v_{1},\ldots,v_{k}\).
+Todo elemento de la forma \(\sum_{i=0}^{d}t_{i}v_{i}\)  con \(t_{i}\geq0\)  y \(\sum_{i=0}^{d}t_{i}=1\), se llama una <b>combinación convexa</b> de \(v_{0},v_{1},\ldots,v_{d}\).
 </p>
 
 <p>
 <b>Tarea</b>
-Demuestra que si \(\alpha\in|A|\), los números \(t_{i}\) tales que \(\alpha=\sum_{i=0}^{k}t_{i}v_{i}\) están unívocamente determinados.
+Demuestra que si \(\alpha\in|A|\), los números \(t_{i}\) tales que \(\alpha=\sum_{i=0}^{d}t_{i}v_{i}\) están unívocamente determinados.
 </p>
 </div>
 </div>
@@ -117,27 +117,44 @@ Si \(\Delta\) es un complejo simplicial en \(X\), denotamos con \(\Delta_{0}=\{x
 </div>
 </li>
 
-<li><a id="org9516eea"></a>Encaje afín<br />
+<li><a id="orgc2a923a"></a>Realización de un simplejo<br />
 <div class="outline-text-4" id="text-2-3-2">
 <p>
-Sea \(\Delta\) un complejo simplicial. Decimos que  \(\phi\colon \Delta_{0}\to\mathbb{R}^{n}\) es un <b>encaje afín</b> si \(\phi\) es inyectiva y \(\phi(\sigma)\) es afínmente independiente para todo \(\sigma\in\Delta\).
+Sean \(\Delta\) un complejo simplicial, \(\sigma\in\Delta\), y sea \(\phi\colon\Delta_{0}\to \mathbb{R}^{n}\) una función tal que \(\phi(\sigma)=\{\phi(x)\mid x\in\sigma\}\) es afínmente independiente. Definimos \(|\sigma|_{\phi}\) como el simplejo geométrico generado por \(A=\phi(\sigma)\).
 </p>
 </div>
 </li>
 
-<li><a id="org7c5732b"></a>Ejemplo.<br />
+<li><a id="org9516eea"></a>Encaje afín<br />
 <div class="outline-text-4" id="text-2-3-3">
 <p>
-Si \(\phi\) es inyectiva y \(\phi(\Delta_{0})\) es afínmente independiente, entonces \(\phi\) es un encaje afin.
+Sea \(\Delta\) un complejo simplicial. Decimos que  \(\phi\colon \Delta_{0}\to\mathbb{R}^{n}\) es un <b>encaje afín</b> si:
+</p>
+<ul class="org-ul">
+<li>\(\phi\) es inyectiva,</li>
+<li>\(\phi(\sigma)\) es afínmente independiente para todo \(\sigma\in\Delta\),</li>
+<li>Para cada \(\sigma,\tau\in\Delta\) tales que \(|\sigma|_{\phi}\cap|\tau|_{\phi}\ne\emptyset\), se tiene que existe \(\rho\in\Delta\) tal que \(|\rho|_{\phi}=|\sigma|_{\phi}\cap|\tau|_{\phi}\).</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org7c5732b"></a>Ejemplo.<br />
+<div class="outline-text-4" id="text-2-3-4">
+<p>
+Si \(\phi\) es inyectiva y \(\phi(\Delta_{0})\) es afínmente independiente, entonces \(\phi\) es un encaje afín.
 </p>
 </div>
 </li>
 
 <li><a id="org316e517"></a>Realización respecto a un encaje<br />
-<div class="outline-text-4" id="text-2-3-4">
+<div class="outline-text-4" id="text-2-3-5">
 <p>
-Sea \(\Delta\) un complejo simplicial. Sea \(\phi\colon \Delta_{0}\to \mathbb{R}^{n}\) un encaje afín. Entonces se define \(|\Delta|_{\phi}=\cup_{\sigma\in\Delta}|\sigma|_{\phi}\), donde, para \(\sigma=\{x_{0},x_{1},\ldots,x_{k}\}\in \Delta\), se tiene que \(|\sigma|_{\phi}\) es el simplejo geométrico generado por \(\phi(\sigma)=\{\phi(x_{0}),\phi(x_{1}),\ldots,\phi(x_{k})\}\).
+Sea \(\Delta\) un complejo simplicial. Sea \(\phi\colon \Delta_{0}\to \mathbb{R}^{n}\) un encaje afín. Entonces se define
 </p>
+\begin{equation}
+\label{eq:1}
+|\Delta|_{\phi}=\cup_{\sigma\in\Delta}|\sigma|_{\phi}.
+\end{equation}
 </div>
 </li>
 </ol>
