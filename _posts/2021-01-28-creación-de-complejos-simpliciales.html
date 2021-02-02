@@ -34,6 +34,10 @@ Si tenemos un complejo simplicial \(\Delta\) y existe una gráfica \(G\) tal que
 <p>
 <b>Tarea</b>. Muestra que existe un complejo simplicial \(\Delta\) tal que no existe gráfica \(G\) con \(\Delta(G)=\Delta\).
 </p>
+
+<p>
+<b>Tarea.</b> Determina un criterio para que un complejo simplicial \(\Delta\) sea un complejo simplicial de completas. [Por ejemplo, ya vimos que una condición necesaria para que \(\Delta\) sea un complejo de completas, es que si \(ab,ac,bc\in\Delta\), entonces \(abc\in\Delta\). ¿Es una condición suficiente?]
+</p>
 </div>
 </div>
 
@@ -41,11 +45,72 @@ Si tenemos un complejo simplicial \(\Delta\) y existe una gráfica \(G\) tal que
 <h3 id="org05ad283"><span class="section-number-3">1.2</span> El complejo orientado de una digráfica</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
-Sea \(D\) una gráfica dirigida (cada arista tiene exactamente una dirección).  Vamos a formar un complejo simplicial \(\Delta^{\to}(D)\) sobre \(V(D)\), donde \(\sigma\subseteq V(D)\) es un simplejo si la subgráfica dirigida de \(D\) inducida por \(\sigma\) es completa y tiene un sumidero y una fuente.
+Una <b>gráfica dirigida</b> \(D\) (o <b>digráfica</b>) consta de un conjunto de vértices y un conjunto de <b>flechas</b>, las cuales son parejas ordenadas de vértices.
 </p>
 
 <p>
-<b>Tarea.</b> Muestra que de verdad la construcción anterior define un complejo simplicial.
+Por ejemplo, consideremos la gráfica dirigida con vértices \(\{1,2,3,4\}\) y cuyas flechas sean \(\{(1,2), (2, 3), (3, 1), (2, 4)\}\). 
+</p>
+
+<p>
+Sea \(D\) una gráfica dirigida (cada arista tiene exactamente una dirección).  Vamos a formar un complejo simplicial \(\Delta^{\to}(D)\) sobre \(V(D)\), donde \(\sigma\subseteq V(D)\) es un simplejo si la subdigráfica dirigida de \(D\) inducida por \(\sigma\) es completa y sea <i>acíclica</i> (es decir, que no tenga ciclos dirigidos).
+</p>
+
+<p>
+<b>Tarea.</b> Muestra que una digráfica completa y acíclica tiene un <i>sumidero</i> y una <i>fuente</i>. (Un sumidero es un vértice a donde todas sus flechas llegan, una fuente es un vértice de donde todas sus aristas salen)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8a459a7" class="outline-2">
+<h2 id="org8a459a7"><span class="section-number-2">2</span> Complejo de conjunto parcialmente ordenado</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Sea \(P\) un conjunto parcialmente ordenado (<i>copo</i>) [es decir un conjunto donde hay una relación reflexiva, transitiva y antisimétrica]. Formaremos un complejo simplicial \(\Delta(P)\) donde los simplejos son los subconjuntos de \(P\) que sean totalmente ordenados (es decir, donde cualesquiera dos son comparables).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99fc17e" class="outline-2">
+<h2 id="org99fc17e"><span class="section-number-2">3</span> Complejo de independencia lineal</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Sea \(V\) un espacio vectorial y sea \(S\subseteq V\) un conjunto finito de vectores. Definimos un complejo simplicial \(\Delta(S)\) sobre \(S\) donde los simplejos sean los conjuntos linealmente independientes.
+</p>
+
+<p>
+<b>Ejemplo</b>. \(V=\mathbb{R}^{3}\), \(S=\{(1,1,1), (1,1,0), (1,0,0), (1,2,-3), (3,0,0)\}\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5443e9f" class="outline-2">
+<h2 id="org5443e9f"><span class="section-number-2">4</span> Complejos de conjuntos</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org29c789f" class="outline-3">
+<h3 id="org29c789f"><span class="section-number-3">4.1</span> La gráfica de intersección</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Sea \(\mathcal{C}\) una colección de subconjuntos de un conjunto \(X\). (Es decir \(\mathcal{C}\subseteq \mathcal{P}(X)\)). Sea \(G\) la gráfica con vértices \(\mathcal{C}\), donde declaramos \(C_{1}\sim C_{2}\) si \(C_{1}\ne C_{2}\) y \(C_{1}\cap C_{2}\ne\emptyset\) (la gráfica \(G\) se llama la gráfica de intersección de la colección \(\mathcal{C}\)). A partir de la gráfica \(G\) formamos \(\Delta(G)\), la cual podríamos denotar como \(\Delta(\mathcal{C})\).
+</p>
+
+<p>
+<b>Ejemplo:</b> Sea \(X=\{1,2,3,4,5\}\). Sea \(\mathcal{C}=\{\{2,3,5\}, \{2,3,4,5\}, \{2,4\},\{1\},\{2\}\}\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26abc85" class="outline-3">
+<h3 id="org26abc85"><span class="section-number-3">4.2</span> El nervio</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Sea \(\mathcal{C}\) una colección de subconjuntos de un conjunto \(X\). Definimos un complejo simplicial \(\mathcal{N}(\mathcal{C})\) con vértices \(\mathcal{C}\), donde \(\sigma\subseteq \mathcal{C}\) es un simplejo si \(\cap\sigma\ne\emptyset\).
+</p>
+
+<p>
+<b>Ejemplo</b> Sea \(X=\{1,2,3,4,5\}\) y sea \(\mathcal{C}=\{\{1,2\},\{2,3\},\{1,3\},\{3,4,5\}\}\).
 </p>
 </div>
 </div>
