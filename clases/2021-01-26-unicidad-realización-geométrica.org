@@ -1,0 +1,43 @@
+  #+title:Unicidad de la realización geométrica
+#+date: 2021-01-26 15:00 -0500
+
+#+setupfile: options.org
+#+beamer: \languagepath{spanish}
+
+* Unicidad de la realización geométrica
+
+** Homeomorfismo
+Dos espacios métricos \(X,Y\) son *homeomorfos*  si existen funciones \(f\colon X\to Y\), \(g\colon Y\to X\) continuas, tales que \(g\circ f=1_{X}\) y \(f\circ g=1_{Y}\). Esto se denota como \(X\cong Y\).
+
+** Lema
+:PROPERTIES:
+:CUSTOM_ID: 1.2
+:END:
+Sea \(A\subseteq \mathbb{R}^{n}\) un conjunto afínmente independiente. Para \(v\in A\), definimos la función \(t_{v}\colon |A|\to \mathbb{R}\), donde \(t_{v}(\alpha)\) es la coordenada baricéntrica correspondiente a \(v\) de \(\alpha\) (es decir, \(\alpha=t_{v}(\alpha)v+\sum_{w\in A-\{v\}} t_{w}w \) y \(\sum_{w\in A}t_{w}=1\)). Entonces \(t_{v}\) es continua.
+
+** Lema del pegado
+Sean \(X, Y\) dos espacios topológicos, y sean \(F_{1},F_{2}\subseteq X\) conjuntos cerrados tales que \(X=F_{1}\cup F_{2}\). Sean \(f_{1}\colon F_{1}\to Y\) y \(f_{2}\colon F_{2}\to Y\) funciones continuas. Supongamos que \(f_{1}(x)=f_{2}(x)\) si \(x\in F_{1}\cap F_{2}\). Entonces la función \(f\colon X\to Y\) definida como:
+\begin{equation}
+\label{eq:1}
+f(x)=
+\begin{cases}
+f_{1}(x) & \text{si \(x\in F_{1}\)},\\
+f_{2}(x) & \text{si \(x\in F_{2}\)}
+\end{cases}
+\end{equation}
+es continua.
+
+** Observación
+El lema del pegado puede extenderse por inducción al caso en el que \(X\) es igual a la unión de una cantidad finita de conjuntos cerrados.
+
+** Observación
+Sea \(\Delta\) un complejo simplicial, y sea \(\phi\colon\Delta_{0}\to \mathbb{R}^{n}\) un encaje afín. Supongamos \(\alpha\in|\sigma|_{\phi}\cap|\tau|_{\phi}\). Para cada \(v\in \phi(\sigma)\) existe una función \(t_{v}^{\sigma}\) como en el lema [[ref:1.2]]. Si además \(v\in\phi(\tau)\), entonces existe una función \(t_{v}^{\tau}\). Como \(\phi\) es un encaje afín, existe \(\rho\in\Delta\) tal que \(|\rho|_{\phi}=|\sigma|_{\phi}\cap|\tau|_{\phi}\), 
+
+** Teorema
+Sea \(\Delta\) un complejo simplicial. Sean \(\phi\colon\Delta_{0}\to \mathbb{R}^{n}\) y \(\psi\colon\Delta_{0}\to \mathbb{R}^{m}\) dos encajes afines. Entonces \(|\Delta|_{\phi}\) es homeomorfo a \(|\Delta|_{\psi}\). 
+
+** Demostración
+Sea \(\Delta_{0}=\{x_{0},x_{1},\ldots,x_{k}\}\). Sea \(\alpha\in |\Delta|_{\phi}\). Entonces \(\alpha\in |\sigma|_{\phi}\) para algún \(\sigma\in\Delta\). Supongamos que \(\sigma=\{x_{i_{0}},x_{i_{i}},\ldots,x_{i_{s}}\}\). Supongamos \(\alpha=\sum_{j=0}^{s} t_{i_{j}}\phi(x_{i_{j}})\). Definimos \(f(\alpha)\) como \(f(\alpha)=\sum_{j=0}^{s} t_{i_{j}}\psi(x_{i_{j}})\). Para demostrar que la función \(f\colon |\Delta|_{\phi}\to |\Delta|_{\psi}\subseteq\mathbb{R}^{m}\) es continua, basta con demostrar que para cada simplejo \(\sigma\in\Delta\) se tiene que la función que extrae las coordenadas baricéntricas de \(|\sigma|_{\phi}\) es continua.
+
+
+

@@ -1,0 +1,79 @@
+% Created 2021-01-28 Thu 16:50
+% Intended LaTeX compiler: pdflatex
+\documentclass[spanish, presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{listings}
+\lstset{
+literate={í}{{\'\i}}1
+{á}{{\'a}}1
+{é}{{\'e}}1
+{ó}{{\'o}}1
+{ú}{{\'u}}1
+}
+\lstalias{ipython}{python}
+\usepackage{tikz}
+\usepackage{tkz-berge}
+\usetikzlibrary{graphs}
+\usetikzlibrary{graphs.standard}
+\usetheme[noframetitlerule]{Verona}
+\author{Rafael Villarroel}
+\date{2021-01-28 15:00 -0500}
+\title{Creación de complejos simpliciales}
+\beamerdefaultoverlayspecification{<+->}
+\hypersetup{
+ pdfauthor={Rafael Villarroel},
+ pdftitle={Creación de complejos simpliciales},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.4.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\languagepath{spanish}
+
+\section{Complejos de gráficas}
+\label{sec:org5b3af85}
+
+\begin{frame}[label={sec:org201fa53}]{El complejo de completas de una gráfica}
+Sea \(G\) una gráfica (simple, finita). Una \alert{completa} de \(G\) es \(C\subseteq V(G)\) tal que si \(x_{1},x_{2}\in C\), entonces \(x_{1}\sim x_{2}\). Observemos que si \(C_{1}\) es completa de \(G\) y \(C_{2}\subseteq C_{1}\), entonces \(C_{2}\) es completa.
+
+El complejo \(\Delta(G)\) se define como el complejo simplicial sobre \(V(G)\) cuyos simplejos son las completas de \(G\).
+
+Si tenemos un complejo simplicial \(\Delta\) y existe una gráfica \(G\) tal que \(\Delta=\Delta(G)\), decimos que \(\Delta\) es un \alert{complejo simplicial de completas}. (En inglés, \(\Delta\) se llama \emph{flag complex} o \emph{clique complex}).
+
+\alert{Ejemplos}. Sea \(G\) la gráfica donde el conjunto de vértices es \(V(G)=\{a,b,c,d,e,f\}\) , y el conjunto de aristas es: \(E(G)=\{ab,ac,ad,ae,af,bf,cf,de,ef\}\). Entonces se tiene que \(\mathcal{F}(\Delta(G))=\{abf,acf,ade,aef\}\).
+
+\alert{Tarea}. Muestra que existe un complejo simplicial \(\Delta\) tal que no existe gráfica \(G\) con \(\Delta(G)=\Delta\).
+\end{frame}
+
+\begin{frame}[label={sec:orgfcb2b74}]{El complejo orientado de una digráfica}
+Sea \(D\) una gráfica dirigida (cada arista tiene exactamente una dirección).  Vamos a formar un complejo simplicial \(\Delta^{\to}(D)\) sobre \(V(D)\), donde \(\sigma\subseteq V(D)\) es un simplejo si la subgráfica dirigida de \(D\) inducida por \(\sigma\) es completa y tiene un sumidero y una fuente.
+
+\alert{Tarea.} Muestra que de verdad la construcción anterior define un complejo simplicial.
+\end{frame}
+\end{document}

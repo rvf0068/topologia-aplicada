@@ -1,0 +1,13 @@
+#+title: Descripción del curso
+#+date: 2021-01-18
+#+layout: page
+#+options: toc:nil
+
+En este curso vamos a ver una introducción al análisis topológico de datos. El curso está dirigido a estudiantes de la segunda mitad de la licenciatura en matemáticas, y como prerrequisitos son necesarios: haber llevado cursos de análisis matemático (espacios métricos, continuidad), álgebra lineal y moderna (espacios vectoriales y grupos abelianos), y haber llevado o estar llevando un curso de topología.
+
+Las sesiones del curso se darán en forma virtual
+- Lunes 3 a 5pm: Resolución de ejercicios con supervisión en grupo de Telegram
+- Martes de 3 a 5pm: Clase virtual en Google Meet
+- Jueves de 3 a 5pm: Clase virtual en Google Meet
+
+En esta página se compartirán enlaces a los materiales y a los videos, pero si alguien desea tener acceso a las clases virtuales, favor de enviar un correo a =rafaelv= en el dominio =uaeh.edu.mx.=

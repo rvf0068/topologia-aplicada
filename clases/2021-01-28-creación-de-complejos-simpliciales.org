@@ -1,0 +1,23 @@
+#+title: Creación de complejos simpliciales
+#+date: 2021-01-28 15:00 -0500
+
+#+setupfile: options.org
+#+beamer: \languagepath{spanish}
+
+* Complejos de gráficas
+
+** El complejo de completas de una gráfica
+Sea \(G\) una gráfica (simple, finita). Una *completa* de \(G\) es \(C\subseteq V(G)\) tal que si \(x_{1},x_{2}\in C\), entonces \(x_{1}\sim x_{2}\). Observemos que si \(C_{1}\) es completa de \(G\) y \(C_{2}\subseteq C_{1}\), entonces \(C_{2}\) es completa.
+
+El complejo \(\Delta(G)\) se define como el complejo simplicial sobre \(V(G)\) cuyos simplejos son las completas de \(G\).
+
+Si tenemos un complejo simplicial \(\Delta\) y existe una gráfica \(G\) tal que \(\Delta=\Delta(G)\), decimos que \(\Delta\) es un *complejo simplicial de completas*. (En inglés, \(\Delta\) se llama /flag complex/ o /clique complex/).
+
+*Ejemplos*. Sea \(G\) la gráfica donde el conjunto de vértices es \(V(G)=\{a,b,c,d,e,f\}\) , y el conjunto de aristas es: \(E(G)=\{ab,ac,ad,ae,af,bf,cf,de,ef\}\). Entonces se tiene que \(\mathcal{F}(\Delta(G))=\{abf,acf,ade,aef\}\).
+
+*Tarea*. Muestra que existe un complejo simplicial \(\Delta\) tal que no existe gráfica \(G\) con \(\Delta(G)=\Delta\).
+
+** El complejo orientado de una digráfica
+Sea \(D\) una gráfica dirigida (cada arista tiene exactamente una dirección).  Vamos a formar un complejo simplicial \(\Delta^{\to}(D)\) sobre \(V(D)\), donde \(\sigma\subseteq V(D)\) es un simplejo si la subgráfica dirigida de \(D\) inducida por \(\sigma\) es completa y tiene un sumidero y una fuente.
+
+*Tarea.* Muestra que de verdad la construcción anterior define un complejo simplicial.

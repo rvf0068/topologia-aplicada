@@ -1,0 +1,19 @@
+#+title: Inicio
+#+date: 2021-01-18 15:00 -0500
+
+#+setupfile: options.org
+#+beamer: \languagepath{spanish}
+
+En este curso vamos a estudiar temas de *topología algebraica* que recientemente han encontrado aplicaciones. Las dos primeras partes son bastante teóricas, y en la última parte veremos varias aplicaciones interesantes.
+
+Las estructuras central del curso son los *complejos simpliciales*. Desde el punto de vista de las aplicaciones, podemos pensar a los complejos simpliciales como una generalización de las gráficas, en donde en lugar de modelar interacciones entre parejas de vértices, vamos a considerar el caso en que las interacciones se pueden dar entre cualesquier cantidad de vértices. A cada complejo simplicial se le puede asociar un espacio topológico. Y la idea es que los "hoyos" que se presentan en el espacio nos dan información sobre la situación modelada por el complejo simplicial.
+
+La manera de detectar los "hoyos" es por medio de una construcción llamada "homología". Para definir la homología vamos a tener que repasar varios teoremas de Álgebra Lineal y examinar con cierto detalle las propiedades de grupos abelianos. Esto también nos dará ocasión de usar herramientas computacionales.
+
+* COMMENT Local Variables
+
+# Local Variables:
+# org-confirm-babel-evaluate: nil
+# org-latex-prefer-user-labels: t
+# ispell-local-dictionary: "castellano"
+# End:

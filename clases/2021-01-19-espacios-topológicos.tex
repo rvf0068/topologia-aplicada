@@ -1,0 +1,102 @@
+% Created 2021-01-19 Tue 17:44
+% Intended LaTeX compiler: pdflatex
+\documentclass[spanish, presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{listings}
+\lstset{
+literate={í}{{\'\i}}1
+{á}{{\'a}}1
+{é}{{\'e}}1
+{ó}{{\'o}}1
+{ú}{{\'u}}1
+}
+\lstalias{ipython}{python}
+\usepackage{tikz}
+\usepackage{tkz-berge}
+\usetikzlibrary{graphs}
+\usetikzlibrary{graphs.standard}
+\usetheme[noframetitlerule]{Verona}
+\author{Rafael Villarroel}
+\date{2021-01-19 15:00 -0500}
+\title{Espacios topológicos}
+\beamerdefaultoverlayspecification{<+->}
+\hypersetup{
+ pdfauthor={Rafael Villarroel},
+ pdftitle={Espacios topológicos},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.4.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\languagepath{spanish}
+
+\section{Definiciones}
+\label{sec:org1ed84fc}
+\begin{frame}[label={sec:org811c0cc}]{Espacios topológicos}
+Un espacio métrico es un conjunto \((X,d)\) donde tenemos una idea de cercanía. La función métrica \(d\) permite definir el concepto de función continua como una función que envía puntos cercanos en puntos cercanos. También se definen los conjuntos abiertos. Resulta que las propiedades de los conjuntos abiertos son suficientes para definir estructuras con el concepto de continuidad, con lo cual se generaliza el concepto de espacio métrico.
+\end{frame}
+
+\begin{frame}[label={sec:orgcd034df}]{Funciones continuas}
+En una función entre espacios métricos \((X,d_{X})\), \((Y,d_{Y})\), dada por \(f\colon X\to Y\), decimos que es \alert{continua} si para todo \(\epsilon>0\) existe \(\delta>0\) tal que si \(d(x,y)<\delta\) entonces \(d(f(x),f(y))<\epsilon\).
+
+Se puede definir un conjunto \(U\subseteq X\) como \alert{abierto} si para todo \(x\in U\) se tiene que existe \(\epsilon>0\) tal que \(B_{\epsilon}(x)\subseteq U\).
+
+Con esta definición, se puede demostrar que \(f\colon X\to Y\) es continua si y solo si \(f^{-1}(U)\) es abierto en \(X\) para todo \(U\) abierto de \(Y\).
+\end{frame}
+
+\begin{frame}[label={sec:orgac33309}]{Definiciones}
+\begin{block}{Topología}
+Sea \(X\) un conjunto. Una \alert{topología} en \(X\) es una colección \(\tau\) de subconjuntos de \(X\) tal que:
+\begin{itemize}
+\item \(\emptyset, X\in \tau\),
+\item Si \(U_{\alpha}\in\tau\) para todo \(\alpha\in I\), entonces \(\cup_{\alpha\in I}U_{\alpha}\in\tau\).
+\item Si \(U_{1},U_{2}\in\tau\), entonces \(U_{1}\cap U_{2}\in \tau\).
+\end{itemize}
+\end{block}
+\begin{block}{Espacio topológico}
+Un \alert{espacio topológico} es una pareja \((X,\tau)\) tal que \(\tau\) es una topología en \(X\).
+
+En un espacio topológico, los elementos de \(\tau\) se llaman \alert{conjuntos abiertos.}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:orgce089f0}]{Ejemplos}
+\begin{itemize}
+\item Para cualquier conjunto \(X\), la colección \(\tau=\{\emptyset, X\}\) es una topología en \(X\).
+\item Dado \((X,d)\) un espacio métrico, la colección
+ \(\tau=\{U\subseteq X\mid\text{para todo}x\in X\text{ existe un }\epsilon>0\text{ tal que }B_{\epsilon}(x)\subseteq U\}\) 
+es una topología en \(X\).
+\item Un caso particular es \(X=\mathbb{R}^{n}\). Tenemos que \(X\) es un espacio métrico con la métrica usual. Si \(Y\subseteq X=\mathbb{R}^{n}\), se tiene una métrica en \(Y\) que está heredada de la métrica de \(X\). Usando tal métrica, se pueden definir abiertos en \(Y\), y por lo tanto, se le puede dar a \(Y\) una topología. En ese sentido, decimos que \(Y\) es un \alert{subespacio} de \(\mathbb{R}^{n}\).
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgb858f94}]{Funciones continuas}
+Si tenemos una función entre espacios topológicos \(f\colon X\to Y\), se dice que es \alert{continua} si y solo si \(f^{-1}(U)\) es abierto en \(X\) para todo \(U\) abierto de \(Y\).
+\end{frame}
+\end{document}

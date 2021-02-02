@@ -1,0 +1,64 @@
+% Created 2021-01-18 Mon 20:05
+% Intended LaTeX compiler: pdflatex
+\documentclass[spanish, presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{lxfonts}
+\usepackage[spanish, mexico, es-noshorthands, english]{babel}
+% remove space between margin and lists
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate{itemize item}}
+\setlist{leftmargin=*,labelindent=0cm}
+\setenumerate[1]{%
+label=\protect\usebeamerfont{enumerate item}%
+\protect\usebeamercolor[fg]{enumerate item}%
+\insertenumlabel.}
+\usepackage{listings}
+\lstset{
+literate={í}{{\'\i}}1
+{á}{{\'a}}1
+{é}{{\'e}}1
+{ó}{{\'o}}1
+{ú}{{\'u}}1
+}
+\lstalias{ipython}{python}
+\usepackage{tikz}
+\usepackage{tkz-berge}
+\usetikzlibrary{graphs}
+\usetikzlibrary{graphs.standard}
+\usetheme[noframetitlerule]{Verona}
+\author{Rafael Villarroel}
+\date{2021-01-18 15:00 -0500}
+\title{Inicio}
+\beamerdefaultoverlayspecification{<+->}
+\hypersetup{
+ pdfauthor={Rafael Villarroel},
+ pdftitle={Inicio},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.4.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\languagepath{spanish}
+
+En este curso vamos a estudiar temas de \alert{topología algebraica} que recientemente han encontrado aplicaciones. Las dos primeras partes son bastante teóricas, y en la última parte veremos varias aplicaciones interesantes.
+
+Las estructuras central del curso son los \alert{complejos simpliciales}. Desde el punto de vista de las aplicaciones, podemos pensar a los complejos simpliciales como una generalización de las gráficas, en donde en lugar de modelar interacciones entre parejas de vértices, vamos a considerar el caso en que las interacciones se pueden dar entre cualesquier cantidad de vértices. A cada complejo simplicial se le puede asociar un espacio topológico. Y la idea es que los ``hoyos'' que se presentan en el espacio nos dan información sobre la situación modelada por el complejo simplicial.
+
+La manera de detectar los ``hoyos'' es por medio de una construcción llamada ``homología''. Para definir la homología vamos a tener que repasar varios teoremas de Álgebra Lineal y examinar con cierto detalle las propiedades de grupos abelianos. Esto también nos dará ocasión de usar herramientas computacionales.
+\end{document}

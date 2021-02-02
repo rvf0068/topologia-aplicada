@@ -1,0 +1,46 @@
+#+title: Espacios topológicos
+#+date: 2021-01-19 15:00 -0500
+
+#+setupfile: options.org
+#+beamer: \languagepath{spanish}
+ 
+* Definiciones
+** Espacios topológicos
+Un espacio métrico es un conjunto \((X,d)\) donde tenemos una idea de cercanía. La función métrica \(d\) permite definir el concepto de función continua como una función que envía puntos cercanos en puntos cercanos. También se definen los conjuntos abiertos. Resulta que las propiedades de los conjuntos abiertos son suficientes para definir estructuras con el concepto de continuidad, con lo cual se generaliza el concepto de espacio métrico.
+
+** Funciones continuas
+
+En una función entre espacios métricos \((X,d_{X})\), \((Y,d_{Y})\), dada por \(f\colon X\to Y\), decimos que es *continua* si para todo \(\epsilon>0\) existe \(\delta>0\) tal que si \(d(x,y)<\delta\) entonces \(d(f(x),f(y))<\epsilon\).
+
+Se puede definir un conjunto \(U\subseteq X\) como *abierto* si para todo \(x\in U\) se tiene que existe \(\epsilon>0\) tal que \(B_{\epsilon}(x)\subseteq U\).
+
+Con esta definición, se puede demostrar que \(f\colon X\to Y\) es continua si y solo si \(f^{-1}(U)\) es abierto en \(X\) para todo \(U\) abierto de \(Y\).
+
+** Definiciones
+*** Topología
+Sea \(X\) un conjunto. Una *topología* en \(X\) es una colección \(\tau\) de subconjuntos de \(X\) tal que:
+- \(\emptyset, X\in \tau\),
+- Si \(U_{\alpha}\in\tau\) para todo \(\alpha\in I\), entonces \(\cup_{\alpha\in I}U_{\alpha}\in\tau\).
+- Si \(U_{1},U_{2}\in\tau\), entonces \(U_{1}\cap U_{2}\in \tau\).
+*** Espacio topológico
+Un *espacio topológico* es una pareja \((X,\tau)\) tal que \(\tau\) es una topología en \(X\).
+
+En un espacio topológico, los elementos de \(\tau\) se llaman *conjuntos abiertos.*
+
+** Ejemplos
+- Para cualquier conjunto \(X\), la colección \(\tau=\{\emptyset, X\}\) es una topología en \(X\).
+- Dado \((X,d)\) un espacio métrico, la colección
+   \(\tau=\{U\subseteq X\mid\text{para todo}x\in X\text{ existe un }\epsilon>0\text{ tal que }B_{\epsilon}(x)\subseteq U\}\) 
+  es una topología en \(X\).
+- Un caso particular es \(X=\mathbb{R}^{n}\). Tenemos que \(X\) es un espacio métrico con la métrica usual. Si \(Y\subseteq X=\mathbb{R}^{n}\), se tiene una métrica en \(Y\) que está heredada de la métrica de \(X\). Usando tal métrica, se pueden definir abiertos en \(Y\), y por lo tanto, se le puede dar a \(Y\) una topología. En ese sentido, decimos que \(Y\) es un *subespacio* de \(\mathbb{R}^{n}\).
+
+** Funciones continuas
+Si tenemos una función entre espacios topológicos \(f\colon X\to Y\), se dice que es *continua* si y solo si \(f^{-1}(U)\) es abierto en \(X\) para todo \(U\) abierto de \(Y\).
+
+* COMMENT Local Variables
+
+# Local Variables:
+# org-confirm-babel-evaluate: nil
+# org-latex-prefer-user-labels: t
+# ispell-local-dictionary: "castellano"
+# End:

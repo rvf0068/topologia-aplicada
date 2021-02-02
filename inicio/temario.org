@@ -1,0 +1,39 @@
+#+title: Temario
+#+date: 2021-01-18
+#+layout: page
+#+options: toc:nil
+
+* Temario
+
+  - Topología y complejos simpliciales
+    - Espacios topológicos
+    - Variedades, superficies
+    - Homotopía y equivalencias homotópicas
+    - Definición de complejo simplicial
+    - Ejemplos de complejos simpliciales
+    - Espacio asociado a un complejo simplicial
+    - Categorías y funtores
+
+  - Homología simplicial
+    - Estructura de grupos abelianos
+    - Complejos de cadena
+    - Homología de un complejo simplicial
+    - Números de Betti
+    - Característica de Euler
+    - Homología relativa
+    - Sucesiones exactas
+
+  - Aplicaciones
+    - Neurociencia
+    - Homología persistente
+
+* Referencias
+
+- Zomorodian, A. J. (2005). Topology for computing. Cambridge University Press, Cambridge.
+- Ghrist, R. (2014). Elementary Applied Topology. Createspace Independent Pub.
+- Sizemore, A. E., Phillips-Cremins, J. E., Ghrist, R., & Bassett, D. S. (2019). The importance of the whole: topological data analysis
+  for the network neuroscientist. Network Neuroscience, 3(3), 656–673.
+- [[https://www.youtube.com/watch?v=XfWibrh6stw][Gunnar Carlsson TDA]]
+- [[https://www.youtube.com/watch?v=2PSqWBIrn90][Introduction to persistent homology]]
+- [[http://people.maths.ox.ac.uk/nanda/cat/Lecture%2001%20Complexes.pdf][Notes by Vidit Nanda on simplicial complexes]]
+- [[https://www.youtube.com/playlist?list=PLnLAqsCN_2kezhtU-2rXsILY-qAejTcwB][YouTube playlist by Vidit Nanda on simplicial complexes]]

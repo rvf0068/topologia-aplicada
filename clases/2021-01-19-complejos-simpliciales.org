@@ -1,0 +1,49 @@
+#+title: Complejos simpliciales
+#+date: 2021-01-19 15:40 -0500
+
+#+setupfile: options.org
+#+beamer: \languagepath{spanish}
+ 
+* Definiciones
+
+** Complejo simplicial
+Sea \(X\) un conjunto finito. Un *complejo simplicial* \(\Delta\) en \(X\) es una colección de subconjuntos de \(X\) que es cerrada bajo inclusión. Es decir, si \(\sigma\in\Delta\) y \(\tau\subseteq\sigma\), entonces \(\tau\in\Delta\).
+
+** Ejemplos
+1. Sea \(X=\{1,2,3\}\). Sea \(\Delta=\{\emptyset,\{1,2\},\{1\},\{2\}\}\). Entonces \(\Delta\) es un complejo simplicial.
+2. Sea \(X=\{1,2,3\}\). Sea \(\Delta=\{\}=\emptyset\). Entonces \(\Delta\) es un complejo simplicial.
+3. Sea \(X=\{1,2,3\}\). Sea \(\Delta=\{\emptyset,\{1,2\},\{1\},\{2\},\{3\},\{1,3\}\}\). Entonces \(\Delta\) es un complejo simplicial.
+4. Sea \(X\) cualquier conjunto finito. Sea \(\Delta=\mathcal{P}(X)\). Entonces \(\Delta\) es un complejo simplicial.
+5. /Observación/ Si \(\Delta\) es un complejo simplicial en \(X\), en particular \(\Delta\subseteq \mathcal{P}(X)\).
+6. Si \(X=\{1,2,3,4\}\), entonces \(\{\{1,2\},\{1,3\}\}\) no es un complejo simplicial, pues no contiene a \(\{1\}\).
+6. Si \(X=\{1,2,3,4\}\), entonces \(\{\emptyset,\{1\},\{1,2\},\{1,2,3\},\{1,2,3,4\}\}\) no es un complejo simplicial, pues no contiene a \(\{2\}\).
+
+** Más definiciones
+Si \(\Delta\) es un complejo simplicial, sus elementos se llaman *simplejos*. Si \(\tau\subseteq\sigma\), decimos que \(\tau\) es una *cara* de \(\sigma\). La *dimensión* \(\dim\sigma\) de un simplejo \(\sigma\) es \(\dim\sigma=|\sigma|-1\). La dimensión de \(\Delta\) es \(\dim\Delta=\max\{\dim\sigma\mid \sigma\in\Delta\}\). 
+
+** Subcomplejo
+Sean \(\Delta_{1}\) y \(\Delta_{2}\) dos complejos simpliciales en \(X\). Decimos que \(\Delta_{1}\) es *subcomplejo*
+ de \(\Delta_{2}\) si \(\Delta_{1}\subseteq \Delta_{2}\). Por ejemplo, si , \(\Delta_{2}=\{\emptyset,\{1,2\},\{1\},\{2\},\{3\},\{1,3\}\}\), el complejo simplicial \(\Delta_{1}=\{\emptyset,\{1\},\{2\},\{3\}\}\) es subcomplejo de \(\Delta_{2}\).
+
+** Esqueleto
+Si \(\Delta\) es cualquier complejo simplicial y \(k\) es un número natural, definimos el *\(k\)-esqueleto*
+ como \(\Delta^{(k)}=\{\sigma\in\Delta\mid \dim\sigma\leq k\}\). Por ejemplo, si \(X=\{1,2,3,4\}\) y  \(\Delta=\{\emptyset,\{1,2\},\{1\},\{2\},\{3\},\{1,3\}\}\), tenemos que:
+- \(\Delta^{(0)}=\{\emptyset,\{1\},\{2\},\{3\}\}\),
+- \(\Delta^{(1)}=\Delta\).
+
+**  Otro ejemplo de esqueleto
+
+Como otro ejemplo, sea \(X=\{1,2,3,4\}\), sea \(\Delta=\mathcal{P}(X)\). Entonces:
+- \(\Delta^{(0)}=\{\emptyset, 1,2,3,4\}\). (En adelante, haremos la convención de denotar, por ejemplo, a \(\{1\}\) como \(1\) y a \(\{1,2\}\) como \(12\))
+- \(\Delta^{(1)}=\Delta^{(0)}\cup\{12,13,14,23,24,34\}\).
+- \(\Delta^{(2)}=\Delta^{(1)}\cup\{123,134,234,124\}\).
+- \(\Delta^{(3)}=\Delta=\Delta^{(4)}\).
+
+*Tarea*   Demuestra que para toda \(k\), el \(k\)-esqueleto de \(\Delta\) es un subcomplejo de \(\Delta\).
+
+** Caras maximales
+Sea \(\Delta\) un complejo simplicial. Un simplejo \(\sigma\in \Delta\) es una *cara maximal*, si \(\sigma\subseteq\tau\) para \(\tau\in\Delta\) implica que \(\sigma=\tau\).
+Por ejemplo, si \(X=\{1,2,3\}\), y \(\Delta=\{\emptyset,\{1,2\},\{1\},\{2\},\{3\},\{1,3\}\}\). Entonces las caras maximales \(\Delta\) de son \(\{1,2\}\) y \(\{1,3\}\). Las caras maximales también se suelen llamar *facetas*. Denotaremos a la colección de facetas del complejo simplicial \(\Delta\) como \(\mathcal{F}(\Delta)\).
+
+/Observación:/
+Un complejo simplicial está determinado por sus caras maximales. Por ejemplo, sea \(\Delta\) el complejo simplicial con conjunto de caras maximales dado por \(\{123,124,134,234\}\). Entonces \(\Delta\) es esencialmente un tetraedro hueco.

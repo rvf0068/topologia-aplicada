@@ -1,0 +1,79 @@
+#+title: Realización geométrica
+#+date: 2021-01-21 15:00 -0500
+
+#+setupfile: options.org
+#+beamer: \languagepath{spanish}
+
+* Idea
+
+** Idea general
+
+A cada complejo simplicial \(\Delta\) le queremos asociar un espacio topológico que denotaremos con \(|\Delta|\), que se llama su *realización geométrica*.
+
+Vamos a considerar un número \(n\) suficientemente grande, y entonces \(|\Delta|\) será un subespacio de \(\mathbb{R}^{n}\).
+
+Por cada simplejo de dimensión 0, ponemos un punto en \(\mathbb{R}^{n}\). Por cada simplejo de dimensión \(1\), ponemos un segmento de recta entre los puntos del simplejo. Por cada simplejo de dimensión 2, ponemos un triángulo entre sus vértices, etc. 
+
+** Ejemplos
+- Consideremos el complejo simplicial \(\Delta_{1}\) con facetas \(\{\{1,2,3\},\{2,4\}\}\).
+- \(\Delta_{2}\) con caras maximales \(\{12,23,34,145\}\).
+- \(\Delta_{3}\) con caras maximales \(\{012,123,03\}\).
+- \(\Delta_{4}\) con caras maximales \(\{145,246,356,12,23,13\}\).
+- \(\Delta_{5}\) con caras maximales \(\{12345\}\) (4-simplejo).
+- *Tarea:* \(\Delta_{6}\) con caras maximales \(\{124,126,134,135,156,235,245,236,346,456\}\).
+
+* Definición formal
+
+** Independencia afín
+Decimos que el conjunto \(\{v_{0},v_{1},\ldots,v_{d}\}\subseteq \mathbb{R}^{n}\) es *afínmente independiente*
+si \(\{v_{1}-v_{0},v_{2}-v_{0},\ldots,v_{d}-v_{0}\}\subseteq \mathbb{R}^{n}\) es *linealmente independiente*. Por convención, todo conjunto con un solo punto es afínmente independiente.
+
+Cuando un conjunto de puntos en \(\mathbb{R}^{n}\) es afínmente independiente, también se dice que los puntos están en *posición general*.
+
+*Tarea*
+Demuestra que el conjunto \(\{v_{0},v_{1},\ldots,v_{d}\}\) es afínmente independiente si y solo si \(\sum_{i=0}^{d}t_{i}v_{i}=0\) y \(\sum_{i=0}^{d}t_{i}=0\) implican que \(t_{0}=t_{1}=\cdots=t_{d}=0\). Por lo tanto, la propiedad de que un conjunto sea afínmente independiente no depende del punto escogido como \(v_{0}\).
+
+*Ejemplo*
+En \(\mathbb{R}^{3}\), el conjunto \(\{(0,0,0),(1,0,0),(0,1,0),(0,0,1)\}\) es afínmente independiente.
+
+*Tarea*
+Demuestra que si un conjunto no es afínmente independiente, pasa uno de:
+- hay tres puntos colineales
+- hay cuatro puntos coplanares
+- etc.
+
+** Simplejo geométrico
+Consideremos el conjunto \(A=\{v_{0},v_{1},\ldots,v_{d}\}\subseteq \mathbb{R}^{n}\) que sea afínmente independiente. El *simplejo geométrico generado por \(A\)* es el subespacio: \(|A|=\{\sum_{i=0}^{d}t_{i}v_{i}\mid t_{i}\geq 0, \sum_{i=0}^{d}t_{i}=1\}\subseteq \mathbb{R}^{n}\).
+
+Por ejemplo, el simplejo geométrico generado por un punto es el mismo punto. Si \(A=\{v_{0},v_{1}\}\), entonces \(|A|\) es el segmento de recta de \(v_{0}\) a \(v_{1}\). Si \(A=\{v_{0},v_{1},v_{2}\}\), entonces \(|A|\) es el triángulo con vértices \(v_{0},v_{1},v_{2}\), etc.
+
+Todo elemento de la forma \(\sum_{i=0}^{d}t_{i}v_{i}\)  con \(t_{i}\geq0\)  y \(\sum_{i=0}^{d}t_{i}=1\), se llama una *combinación convexa* de \(v_{0},v_{1},\ldots,v_{d}\).
+
+*Tarea*
+Demuestra que si \(\alpha\in|A|\), los números \(t_{i}\) tales que \(\alpha=\sum_{i=0}^{d}t_{i}v_{i}\) están unívocamente determinados.
+
+** Realización geométrica
+
+*** Vértices de un complejo simplicial
+Si \(\Delta\) es un complejo simplicial en \(X\), denotamos con \(\Delta_{0}=\{x\in X\mid \{x\}\in \Delta\}\). Los elementos de \(\Delta_{0}\) se llaman *vértices* de \(\Delta\).
+
+*** Realización de un simplejo
+Sean \(\Delta\) un complejo simplicial, \(\sigma\in\Delta\), y sea \(\phi\colon\Delta_{0}\to \mathbb{R}^{n}\) una función tal que \(\phi(\sigma)=\{\phi(x)\mid x\in\sigma\}\) es afínmente independiente. Definimos \(|\sigma|_{\phi}\) como el simplejo geométrico generado por \(A=\phi(\sigma)\).
+
+*** Encaje afín
+Sea \(\Delta\) un complejo simplicial. Decimos que  \(\phi\colon \Delta_{0}\to\mathbb{R}^{n}\) es un *encaje afín* si:
+- \(\phi\) es inyectiva,
+- \(\phi(\sigma)\) es afínmente independiente para todo \(\sigma\in\Delta\),
+- Para cada \(\sigma,\tau\in\Delta\) tales que \(|\sigma|_{\phi}\cap|\tau|_{\phi}\ne\emptyset\), se tiene que existe \(\rho\in\Delta\) tal que \(|\rho|_{\phi}=|\sigma|_{\phi}\cap|\tau|_{\phi}\).
+
+*** Ejemplo.
+Si \(\phi\) es inyectiva y \(\phi(\Delta_{0})\) es afínmente independiente, entonces \(\phi\) es un encaje afín.
+
+*** Realización respecto a un encaje
+Sea \(\Delta\) un complejo simplicial. Sea \(\phi\colon \Delta_{0}\to \mathbb{R}^{n}\) un encaje afín. Entonces se define
+\begin{equation}
+\label{eq:1}
+|\Delta|_{\phi}=\cup_{\sigma\in\Delta}|\sigma|_{\phi}.
+\end{equation}
+
+

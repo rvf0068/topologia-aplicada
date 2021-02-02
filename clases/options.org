@@ -1,0 +1,53 @@
+# FORMATO PARA PRESENTACION
+#+latex_class: beamer
+#+startup: beamer
+#+latex_class_options: [spanish, presentation]
+
+# FORMATO PARA ARTICULO
+# #+latex_class: article
+# #+latex_header: \usepackage{beamerarticle}
+
+# FORMATO PARA HANDOUT
+# #+latex_class_options: [spanish, handout]
+# #+latex_header: \usepackage{pgfpages}
+# #+latex_header: \pgfpagesuselayout{4 on 1}[letterpaper,landscape]
+
+#+beamer_theme: Verona [noframetitlerule]
+
+#+beamer_header: \beamerdefaultoverlayspecification{<+->}
+
+#+latex_header: \usepackage{lxfonts}
+#+latex_header: \usepackage[spanish,mexico,es-noshorthands]{babel}
+
+#+options: H:2 tags:nil toc:nil ':t
+
+#+latex_header: % remove space between margin and lists
+#+latex_header: \usepackage{enumitem}
+#+latex_header: \setitemize{label=\usebeamerfont*{itemize item}%
+#+latex_header:   \usebeamercolor[fg]{itemize item}
+#+latex_header:   \usebeamertemplate{itemize item}}
+#+latex_header: \setlist{leftmargin=*,labelindent=0cm}
+#+latex_header: \setenumerate[1]{%
+#+latex_header:   label=\protect\usebeamerfont{enumerate item}%
+#+latex_header:         \protect\usebeamercolor[fg]{enumerate item}%
+#+latex_header:         \insertenumlabel.}
+
+#+latex_header: \usepackage{listings}
+#+latex_header: \lstset{
+#+latex_header:   literate={í}{{\'\i}}1
+#+latex_header:            {á}{{\'a}}1
+#+latex_header:            {é}{{\'e}}1
+#+latex_header:            {ó}{{\'o}}1
+#+latex_header:            {ú}{{\'u}}1
+#+latex_header: }
+#+latex_header: \lstalias{ipython}{python}
+
+#+latex_header: \usepackage{tikz}
+#+latex_header: \usepackage{tkz-berge}
+#+latex_header: \usetikzlibrary{graphs}
+#+latex_header: \usetikzlibrary{graphs.standard}
+
+#+property: header-args:latex :imagemagick t :iminoptions -density 300 -resize 400
+#+property: header-args:latex+ :packages '(("" "tikz") ("" "tkz-berge")) :border 1pt
+#+property: header-args:latex+ :headers '("\\usetikzlibrary{graphs}\\usetikzlibrary{graphs.standard}")
+#+property: header-args:latex+ :results raw file :cache yes
