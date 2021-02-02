@@ -92,25 +92,25 @@ dibujo_de_puntos(coords_x, coords_y)
 :end:
 
 #+begin_src ipython
-dibujo_de_puntos(*puntos_en_el_plano(50))
+dibujo_de_puntos(*puntos_en_el_plano(500))
 #+end_src
 
-#+RESULTS[e2844272299548e21ffa99e0e350ca44fbb12a63]:
+#+RESULTS[f9940a57fc1dc7368f549234c00a53be5a2f1226]:
 :results:
-# Out[11]:
-[[file:./obipy-resources/W41nHu.png]]
+# Out[43]:
+[[file:./obipy-resources/5n31FQ.png]]
 :end:
 
 #+begin_src ipython
 a = (0, 0)
-b = (3, 4)
+b = (3, 6)
 euclidean(a, b)  
 #+end_src
 
-#+RESULTS[58655c0e949bd13d430ee8f98aa33a4961b22fad]:
+#+RESULTS[8d475c709eaf724f36bdae2ff8521507d20fba11]:
 :results:
-# Out[13]:
-: 5.0
+# Out[44]:
+: 6.708203932499369
 :end:
 
 #+begin_src ipython
@@ -123,7 +123,7 @@ def grafica_rips(listax, listay, epsilon):
         vertices.append((listax[i], listay[i]))
     for i in range(n):
         for j in range(i+1, n):
-            if euclidean(vertices[i], vertices[j]) < epsilon:
+            if euclidean(vertices[i], vertices[j]) <= epsilon:
                 aristas.append((vertices[i], vertices[j]))
     g.add_nodes_from(vertices)
     g.add_edges_from(aristas)
@@ -176,13 +176,23 @@ dibujo_grafica_rips(coords_x, coords_y, 0.5)
 :end:
 
 #+begin_src ipython
-dibujo_grafica_rips(*puntos_en_el_plano(20), 0.2)
+coords_x, coords_y = puntos_en_el_plano(50)
 #+end_src
 
-#+RESULTS[7d160e30a0539d4b239d1d4c1cbfea312df30f92]:
+#+RESULTS[51d7551021a531c0ef4f7df2fa636924c4880f08]:
 :results:
-# Out[41]:
-[[file:./obipy-resources/YvR59T.png]]
+# Out[45]:
+:end:
+
+
+#+begin_src ipython
+dibujo_grafica_rips(coords_x, coords_y, .2)
+#+end_src
+
+#+RESULTS[06bcc058f48b248534474f9fbd5e776d60ade9a9]:
+:results:
+# Out[51]:
+[[file:./obipy-resources/Wk4Q1x.png]]
 :end:
 
 
