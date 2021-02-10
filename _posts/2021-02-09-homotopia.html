@@ -1,0 +1,114 @@
+---
+layout: post
+title: Homotopía
+date: 2021-02-09 16:00 -0500 
+comments: true
+published: true
+categories: 
+---
+
+
+<div id="outline-container-orgb716e94" class="outline-2">
+<h2 id="orgb716e94"><span class="section-number-2">1</span> Definiciones básicas</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Sea \(I=[0,1]\subseteq \mathbb{R}\) con la topología usual.
+</p>
+</div>
+
+<div id="outline-container-org8dfd594" class="outline-3">
+<h3 id="org8dfd594"><span class="section-number-3">1.1</span> Homotopía</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Sean \(X,Y\) dos espacios topológicos. Sean \(f,g\colon X\to Y\) dos funciones continuas. Una <b>homotopía</b> entre \(f\) y \(g\) es una función continua \(H\colon X\times I\to Y\) tal que:
+</p>
+<ul class="org-ul">
+<li>\(H(x,0)=f(x)\) para todos \(x\in X\),</li>
+<li>\(H(x,1)=g(x)\) para todos \(x\in X\).
+Si existe una homotopía entre \(f\) y \(g\), decimos que \(f,g\) son <b>homotópicas</b>, y escribimos \(f\simeq g\).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge9161f4" class="outline-3">
+<h3 id="orge9161f4"><span class="section-number-3">1.2</span> Observación</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Para cada \(t_{0}\in I\) fijo, tenemos que \(x\mapsto H(x,t_{0})\) es una función continua de \(X\) en \(Y\). La definición de homotopía entonces exige que haya una manera de cambiar continuamente desde la función \(f\) hasta la función \(g\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfed6f19" class="outline-3">
+<h3 id="orgfed6f19"><span class="section-number-3">1.3</span> Teorema</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+La relación de homotopía es una relación de equivalencia en el conjunto de funciones continuas de \(X\) a \(Y\). (No lo vamos a demostrar, pero como ejercicio se deja demostrar que es reflexiva y simétrica).
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org922d78f" class="outline-2">
+<h2 id="org922d78f"><span class="section-number-2">2</span> Equivalencias homotópicas</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgc3027ba" class="outline-3">
+<h3 id="orgc3027ba"><span class="section-number-3">2.1</span> Definición</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Sean \(X,Y\) dos espacios y \(f\colon X\to Y\) una función continua. Decimos que \(f\) es una <b>equivalencia homotópica</b> si existe \(g\colon Y\to X\) continua tal que \(g\circ f\simeq 1_{X}\) y \(f\circ g\simeq 1_{Y}\). Si existe una equivalencia homotópica entre \(X\) y \(Y\), decimos que \(X,Y\) son <b>homotópicos</b>, o bien que tienen el <b>mismo tipo de homotopía</b>, y lo denotamos \(X\simeq Y\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga12673d" class="outline-3">
+<h3 id="orga12673d"><span class="section-number-3">2.2</span> Ejemplo</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Si dos espacios son homeomorfos, entonces son homotópicos.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02cbbd0" class="outline-3">
+<h3 id="org02cbbd0"><span class="section-number-3">2.3</span> Definición</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Sea \(X\) un espacio, y sea \(Y\subseteq X\) un subespacio. Sea \(D\colon X\times I\to X\) continua tal que:
+</p>
+<ul class="org-ul">
+<li>\(D(x,0)=x\) para todo \(x\in X\),</li>
+<li>\(D(x,1)\in Y\) para todo \(x\in X\).</li>
+<li>\(D(y,t)=y\) para todos \(y\in Y\), \(t\in I\).
+Decimos que \(D\) define un <b>retracto fuerte por deformación</b> de \(X\) en \(Y\).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8de3104" class="outline-3">
+<h3 id="org8de3104"><span class="section-number-3">2.4</span> Teorema</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Si \(D\) es un retracto fuerte por deformación de \(X\) en \(Y\), se tiene que \(X\simeq Y\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb5eb61" class="outline-3">
+<h3 id="orgdb5eb61"><span class="section-number-3">2.5</span> Demostración</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Sea \(f\colon X\to Y\) dada por \(f(x)=D(x,1)\). Sea \(g\colon Y\to X\) dada por la inclusión (es decir, \(g(y)=y\)). Entonces:
+</p>
+<ul class="org-ul">
+<li>Si \(y\in Y\), tenemos que \((f\circ g)(y)=f(g(y))=f(y)=D(y,1)=y\). Es decir \(f\circ g= 1_{Y}\).</li>
+<li>Si \(x\in X\), tenemos que \((g\circ f)(x)=g(f(x))=g(D(x,1))=D(x,1)\).  Observemos que \(D\) es una homotopía entre \(1_{X}\) y \(g\circ f\), pues:
+<ul class="org-ul">
+<li>\(D(x,0)=x=1_{X}(x)\),</li>
+<li>\(D(x,1)=(g\circ f)(x)\).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
