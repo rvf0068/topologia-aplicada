@@ -1,0 +1,34 @@
+---
+layout: post
+title: Espacios contraíbles
+date: 2021-02-11 15:00 -0500 
+comments: true
+published: true
+categories: 
+---
+
+
+<div id="outline-container-org33dd43a" class="outline-2">
+<h2 id="org33dd43a"><span class="section-number-2">1</span> Definición</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Sea \(X\) un espacio topológico. Decimos que \(X\) es <b>contraíble</b> si es homotópico al espacio de un punto.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0dee96e" class="outline-2">
+<h2 id="org0dee96e"><span class="section-number-2">2</span> Ejemplos</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Un espacio <i>convexo</i> es contraíble. [Un espacio \(X\subseteq \mathbb{R}^{n}\) es convexo si para todos \(x_{1},x_{2}\in X\) y \(t\in[0,1]\) se tiene que \((1-t)x_{1}+tx_{2}\in X\). Sea \(x_{0}\in X\). Definamos \(D\colon X\times I\to X\) como  \(D(x,t)=(1-t)x+tx_{0}\). Entonces \(D\) es un retracto fuerte por deformación de \(X\) en \(\{x_{0}\}\).]</li>
+<li>En general, la demostración anterior se aplica a los conjuntos \(X\) que <i>tienen forma de estrella</i> a partir de \(x_{0}\), es decir tales que existe \(x_{0}\in X\) donde para todo \(x\in X\) y \(t\in [0,1]\) se tiene que \((1-t)x+tx_{0}\in X\).</li>
+<li>Bolas cerradas \(B^{n}=\{x\in \mathbb{R}^{n}\mid |x|\leq 1\}\) y realizaciones geométricas de simplejos son espacios convexos, por lo tanto, son contraíbles.</li>
+<li>Ninguna \(n\)-esfera (la \(n\)-esfera, para \(n\geq 0\) se define como \(S^{n}=\{x\in \mathbb{R}^{n+1}\mid |x|=1\}\)) es contraíble. (Notemos que \(S^{n}\subseteq B^{n+1}\))</li>
+</ul>
+
+<p>
+<b>Lema</b> Sea \(X\) un espacio topológico contraíble. Entonces cualquier función continua \(f\colon S^{n}\to X\) se puede extender a una función \(F\colon B^{n+1}\to X\).
+</p>
+</div>
+</div>
