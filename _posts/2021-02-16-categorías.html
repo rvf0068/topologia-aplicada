@@ -1,0 +1,80 @@
+---
+layout: post
+title: Categorías
+date: 2021-02-16 15:30 -0500 
+comments: true
+published: true
+categories: 
+---
+
+
+<div id="outline-container-orgaf30267" class="outline-2">
+<h2 id="orgaf30267"><span class="section-number-2">1</span> Mapeos simpliciales</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org4ecb1cf" class="outline-3">
+<h3 id="org4ecb1cf"><span class="section-number-3">1.1</span> Definición</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Sea \(\Delta_{1}\) un complejo simplicial en \(X\) y sea \(\Delta_{2}\) un complejo simplicial en \(Y\). Un <b>mapeo simplicial</b> \(f\colon \Delta_{1}\to\Delta_{2}\) es una función \(f\colon X\to Y\) tal que \(f(\sigma)\in\Delta_{2}\) para \(\sigma\in\Delta_{1}\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35739b0" class="outline-3">
+<h3 id="org35739b0"><span class="section-number-3">1.2</span> Ejemplo</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Sea \(X=\{1,2,3,4\}\). Sea \(\Delta_{1}=\{\emptyset,1,2,3,4,12,13,23,24,34,123,234\}\). Sea \(Y=\{a,b,c\}\). Sea \(\Delta_{2}=\{\emptyset,a,b,c,ab,ac\}\).
+</p>
+<ul class="org-ul">
+<li>Sea \(f\colon X\to Y\) tal que \(f(1)=a,f(2)=b,f(3)=c,f(4)=a\). Tenemos que \(f(23)=bc\), el cual no es un elemento de \(\Delta_{2}\), por lo que \(f\) no es un mapeo simplicial</li>
+<li>Sea  \(g\colon X\to Y\) tal que \(g(1)=a,g(2)=c,g(3)=c,g(4)=a\). Entonces \(g\) es un mapeo simplicial.</li>
+<li>Sea  \(h\colon X\to Y\) tal que \(h(1)=b,h(2)=a,h(3)=a,h(4)=c\). Entonces \(h\) es un mapeo simplicial.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc2cf738" class="outline-3">
+<h3 id="orgc2cf738"><span class="section-number-3">1.3</span> Teorema</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Un mapeo simplicial \(f\colon \Delta_{1}\to\Delta_{2}\) induce una función continua \(|f|\colon |\Delta_{1}|\to |\Delta_{2}|\).
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc9635c9" class="outline-2">
+<h2 id="orgc9635c9"><span class="section-number-2">2</span> Categorías</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org1b487ac" class="outline-3">
+<h3 id="org1b487ac"><span class="section-number-3">2.1</span> Definición</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Una categoría \(\mathbf{C}\) consta de:
+</p>
+<ul class="org-ul">
+<li>Una clase de <b>objetos</b> \(\mathrm{ob}\mathbf{C}\).</li>
+<li>Para cada pareja de objetos \(A,B\in \mathrm{ob}\mathbf{C}\), un conjunto \(\mathrm{hom}_{\mathbf{C}}(A,B)\), cuyos elementos se llaman <b>morfismos</b> de \(A\) en \(B\).
+Los morfismos tienen que satisfacer:
+<ul class="org-ul">
+<li>Para cada \(A,B,D\in \mathrm{ob}\mathbf{C}\), existe una función \(\mathrm{hom}_{\mathbf{C}}(A,B)\times\hom_{\mathbf{C}}(B,D)\to \mathrm{hom}_{\mathbf{C}}(A,D)\) llamada <b>composición</b>, denotada \((f,g)\mapsto g\circ f\).</li>
+<li>Para cada \(A\in \mathrm{ob}\mathbf{C}\), existe \(1_{A}\in \mathrm{hom}_{\mathbf{C}}(A,A)\) tal que si \(f\in \mathrm{hom}_{\mathbf{C}}(A,B)\), entonces \(1_{B}\circ f=f\circ 1_{A}=f\).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3f08553" class="outline-3">
+<h3 id="org3f08553"><span class="section-number-3">2.2</span> Ejemplos</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Consideremos la categoría \(\mathbf{SimpComp}\) cuya clase de objetos es la clase de todos los complejos simpliciales abstractos y si \(\Delta_{1},\Delta_{2}\in \mathrm{obj}\mathbf{SimpComp}\), el conjunto \(\mathrm{hom}_{\mathbf{SimpComp}}(\Delta_{1},\Delta_{2})\) es el conjunto de los mapeos simpliciales de \(\Delta_{1}\) a \(\Delta_{2}\).</li>
+<li>La categoría \(\mathbf{Top}\), cuya clase de objetos es la clase de todos los espacios topológicos y si \(X,Y\) son espacios topológicos, el conjunto \(\mathrm{hom}_{\mathbf{Top}}(X,Y)\) es el conjunto de las funciones continuas de \(X\) a \(Y\).</li>
+<li>La categoría \(\mathbf{Set}\), cuya clase de objetos es la clase de todos los conjuntos y los morfismos son funciones.</li>
+</ul>
+</div>
+</div>
+</div>

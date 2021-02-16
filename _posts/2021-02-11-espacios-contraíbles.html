@@ -24,11 +24,24 @@ Sea \(X\) un espacio topológico. Decimos que \(X\) es <b>contraíble</b> si es 
 <li>Un espacio <i>convexo</i> es contraíble. [Un espacio \(X\subseteq \mathbb{R}^{n}\) es convexo si para todos \(x_{1},x_{2}\in X\) y \(t\in[0,1]\) se tiene que \((1-t)x_{1}+tx_{2}\in X\). Sea \(x_{0}\in X\). Definamos \(D\colon X\times I\to X\) como  \(D(x,t)=(1-t)x+tx_{0}\). Entonces \(D\) es un retracto fuerte por deformación de \(X\) en \(\{x_{0}\}\).]</li>
 <li>En general, la demostración anterior se aplica a los conjuntos \(X\) que <i>tienen forma de estrella</i> a partir de \(x_{0}\), es decir tales que existe \(x_{0}\in X\) donde para todo \(x\in X\) y \(t\in [0,1]\) se tiene que \((1-t)x+tx_{0}\in X\).</li>
 <li>Bolas cerradas \(B^{n}=\{x\in \mathbb{R}^{n}\mid |x|\leq 1\}\) y realizaciones geométricas de simplejos son espacios convexos, por lo tanto, son contraíbles.</li>
-<li>Ninguna \(n\)-esfera (la \(n\)-esfera, para \(n\geq 0\) se define como \(S^{n}=\{x\in \mathbb{R}^{n+1}\mid |x|=1\}\)) es contraíble. (Notemos que \(S^{n}\subseteq B^{n+1}\))</li>
+<li>Ninguna \(n\)-esfera (la \(n\)-esfera, para \(n\geq 0\) se define como \(S^{n}=\{x\in \mathbb{R}^{n+1}\mid |x|=1\}\)) es contraíble. (Notemos que \(S^{n}\subseteq B^{n+1}\)). La demostración de que ninguna esfera es contraíble se verá después.</li>
 </ul>
 
 <p>
 <b>Lema</b> Sea \(X\) un espacio topológico contraíble. Entonces cualquier función continua \(f\colon S^{n}\to X\) se puede extender a una función \(F\colon B^{n+1}\to X\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf14aedd" class="outline-2">
+<h2 id="orgf14aedd"><span class="section-number-2">3</span> Teorema del nervio</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<b>Teorema</b>. Sea \(X\) un espacio topológico. Sea \(\mathcal{C}=\{U_{\alpha}\}_{\alpha\in I}\) una cubierta finita. Supongamos que toda intersección no vacía \(U_{\alpha_{1}}\cap U_{\alpha_{2}}\cdots\cap U_{\alpha_{k}}\ne\emptyset\) de elementos de la cubierta es contraíble, entonces \(X\simeq \mathcal{N}(\mathcal{C})\).
+</p>
+
+<p>
+<b>Corolario</b>. Sea \(S\subseteq \mathbb{R}^{n}\), sea \(\epsilon>0\). Si \(\mathcal{C}=\{B_{\frac{\epsilon}{2}}(x)\mid x\in S\}\), entonces el complejo de Čech \(\mathcal{N}_{\epsilon}(S)\simeq \cup_{x\in S} B_{\frac{\epsilon}{2}}(x)\). [pues \(\mathcal{C}\) es una cubierta de \(\cup_{x\in S} B_{\frac{\epsilon}{2}}(x)\) y toda intersección de una cantidad finita de bolas no vacía es un conjunto convexo, por lo tanto, contraíble].
 </p>
 </div>
 </div>
