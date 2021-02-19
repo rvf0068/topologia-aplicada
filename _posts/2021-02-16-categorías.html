@@ -12,8 +12,8 @@ categories:
 <h2 id="orgaf30267"><span class="section-number-2">1</span> Mapeos simpliciales</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org4ecb1cf" class="outline-3">
-<h3 id="org4ecb1cf"><span class="section-number-3">1.1</span> Definición</h3>
+<div id="outline-container-org1b487ac" class="outline-3">
+<h3 id="org1b487ac"><span class="section-number-3">1.1</span> Definición</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Sea \(\Delta_{1}\) un complejo simplicial en \(X\) y sea \(\Delta_{2}\) un complejo simplicial en \(Y\). Un <b>mapeo simplicial</b> \(f\colon \Delta_{1}\to\Delta_{2}\) es una función \(f\colon X\to Y\) tal que \(f(\sigma)\in\Delta_{2}\) para \(\sigma\in\Delta_{1}\).
@@ -43,25 +43,39 @@ Un mapeo simplicial \(f\colon \Delta_{1}\to\Delta_{2}\) induce una función cont
 </p>
 </div>
 </div>
+
+<div id="outline-container-org9aaf6fe" class="outline-3">
+<h3 id="org9aaf6fe"><span class="section-number-3">1.4</span> Ejercicio</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Demuestra que:
+</p>
+<ul class="org-ul">
+<li>el mapeo identidad \(\Delta\to\Delta\) es un mapeo simplicial.</li>
+<li>la composición de dos mapeos simpliciales es un mapeo simplicial.</li>
+</ul>
+</div>
+</div>
 </div>
 
 <div id="outline-container-orgc9635c9" class="outline-2">
 <h2 id="orgc9635c9"><span class="section-number-2">2</span> Categorías</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org1b487ac" class="outline-3">
-<h3 id="org1b487ac"><span class="section-number-3">2.1</span> Definición</h3>
+<div id="outline-container-org60a8de4" class="outline-3">
+<h3 id="org60a8de4"><span class="section-number-3">2.1</span> Definición</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Una categoría \(\mathbf{C}\) consta de:
 </p>
 <ul class="org-ul">
-<li>Una clase de <b>objetos</b> \(\mathrm{ob}\mathbf{C}\).</li>
-<li>Para cada pareja de objetos \(A,B\in \mathrm{ob}\mathbf{C}\), un conjunto \(\mathrm{hom}_{\mathbf{C}}(A,B)\), cuyos elementos se llaman <b>morfismos</b> de \(A\) en \(B\).
+<li>Una clase de <b>objetos</b> \(\mathrm{obj}\mathbf{C}\).</li>
+<li>Para cada pareja de objetos \(A,B\in \mathrm{obj}\mathbf{C}\), un conjunto \(\mathrm{hom}_{\mathbf{C}}(A,B)\), cuyos elementos se llaman <b>morfismos</b> de \(A\) en \(B\).
 Los morfismos tienen que satisfacer:
 <ul class="org-ul">
-<li>Para cada \(A,B,D\in \mathrm{ob}\mathbf{C}\), existe una función \(\mathrm{hom}_{\mathbf{C}}(A,B)\times\hom_{\mathbf{C}}(B,D)\to \mathrm{hom}_{\mathbf{C}}(A,D)\) llamada <b>composición</b>, denotada \((f,g)\mapsto g\circ f\).</li>
-<li>Para cada \(A\in \mathrm{ob}\mathbf{C}\), existe \(1_{A}\in \mathrm{hom}_{\mathbf{C}}(A,A)\) tal que si \(f\in \mathrm{hom}_{\mathbf{C}}(A,B)\), entonces \(1_{B}\circ f=f\circ 1_{A}=f\).</li>
+<li>Para cada \(A,B,D\in \mathrm{obj}\mathbf{C}\), existe una función \(\mathrm{hom}_{\mathbf{C}}(A,B)\times\hom_{\mathbf{C}}(B,D)\to \mathrm{hom}_{\mathbf{C}}(A,D)\) llamada <b>composición</b>, denotada \((f,g)\mapsto g\circ f\).</li>
+<li>Si \(f\in \mathrm{hom}_{\mathbf{C}}(A,B)\), \(g\in \mathrm{hom}_{\mathbf{C}}(B,D)\), \(h\in \mathrm{hom}_{\mathbf{C}}(D,E)\), se tiene que \(h\circ(g\circ f)=(h\circ g)\circ f\).</li>
+<li>Para cada \(A\in \mathrm{obj}\mathbf{C}\), existe \(1_{A}\in \mathrm{hom}_{\mathbf{C}}(A,A)\) tal que si \(A,B\in \mathrm{obj}\mathbf{C}\) y \(f\in \mathrm{hom}_{\mathbf{C}}(A,B)\), entonces \(1_{B}\circ f=f\circ 1_{A}=f\). El morfismo \(1_{A}\) se llama <b>identidad</b> en \(A\).</li>
 </ul></li>
 </ul>
 </div>
@@ -73,7 +87,13 @@ Los morfismos tienen que satisfacer:
 <ul class="org-ul">
 <li>Consideremos la categoría \(\mathbf{SimpComp}\) cuya clase de objetos es la clase de todos los complejos simpliciales abstractos y si \(\Delta_{1},\Delta_{2}\in \mathrm{obj}\mathbf{SimpComp}\), el conjunto \(\mathrm{hom}_{\mathbf{SimpComp}}(\Delta_{1},\Delta_{2})\) es el conjunto de los mapeos simpliciales de \(\Delta_{1}\) a \(\Delta_{2}\).</li>
 <li>La categoría \(\mathbf{Top}\), cuya clase de objetos es la clase de todos los espacios topológicos y si \(X,Y\) son espacios topológicos, el conjunto \(\mathrm{hom}_{\mathbf{Top}}(X,Y)\) es el conjunto de las funciones continuas de \(X\) a \(Y\).</li>
-<li>La categoría \(\mathbf{Set}\), cuya clase de objetos es la clase de todos los conjuntos y los morfismos son funciones.</li>
+<li>La categoría \(\mathbf{Set}\), cuya clase de objetos es la clase de todos los conjuntos y si \(A,B\) son conjuntos, el conjunto \(\mathrm{hom}_{\mathbf{Set}}(A,B)\) consta de las funciones de \(A\) en \(B\).</li>
+<li>La categoría <b>Graph</b> cuya clase de objetos es la clase de todas las gráficas y si \(G_{1},G_{2}\) son dos gráficas se tiene que \(\mathrm{hom}_{\mathbf{Graph}}(G_{1},G_{2})\) consta de las funciones \(f\colon V(G_{1})\to V(G_{2})\) tales que si \(v_{1}\sim v_{2}\) en \(G_{1}\), entonces \(f(v_{1})\sim f(v_{2})\) en \(G_{2}\) o \(f(v_{1})=f(v_{2})\).</li>
+<li>La categoría <b>Poset</b> cuya clase de objetos es la clase de todos los conjuntos parcialmente ordenados y si \(P_{1},P_{2}\) son dos copos, \(\mathrm{hom}_{\mathbf{Poset}}(P_{1},P_{2})\) consta de las funciones \(f\colon P_{1}\to P_{2}\) tales que si \(x_{1}\leq x_{2}\) en \(P_{1}\) se tiene que \(f(x_{1})\leq f(x_{2})\) en \(P_{2}\).</li>
+<li>Sea \(F\) un campo. La categoría \(\mathbf{FVect}\) cuya clase de objetos son los espacios vectoriales sobre \(F\) y si \(V,W\) son \(F\)-espacios vectoriales, se tiene que \(\mathrm{hom}_{\mathbf{FVect}}(V,W)\) es el conjunto de las transformaciones lineales de \(V\) en \(W\).</li>
+<li>La categoría <b>Grp</b> de los grupos.</li>
+<li>La categoría <b>AbGrp</b> de los grupos abelianos.</li>
+<li>Sea \(G\) un grupo. Definiremos una categoría \(\mathbf{G}\), donde \(\mathrm{obj}\mathbf{G}=\{*\}\). Definimos \(\mathrm{hom}_{\mathbf{G}}(*,*)=G\). Definimos \(1_{*}\) como el elemento neutro de \(G\). Definimos \(\hom_{\mathbf{G}}(*,*)\times \hom_{\mathbf{G}}(*,*)\to \hom_{\mathbf{G}}(*,*) \) como la operación en el grupo.</li>
 </ul>
 </div>
 </div>
