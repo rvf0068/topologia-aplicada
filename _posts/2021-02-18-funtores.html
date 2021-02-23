@@ -30,7 +30,25 @@ Sean \(\mathbf{C}\), \(\mathbf{D}\) dos categorías. Un <b>funtor</b> \(F\colon 
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Sea \(\mathbf{C}=\mathbf{AbGrp}\) y sea \(\mathbf{D}=\mathbf{Grp}\). Sea \(F\colon \mathbf{AbGrp}\to \mathbf{Grp}\) dada por la inclusión. Es decir \(F(A)=A\). Si \(A,B\in \mathrm{obj} \mathbf{AbGrp}\), \(F\colon \mathrm{hom}_{\mathbf{AbGrp}}(A,B)\to\mathrm{hom}_{\mathbf{Grp}}(FA,FB)\) es la función identidad.</li>
-<li>Un funtor \(\mathbf{SimpComp}\to \mathbf{Top}\) dado por la realización geométrica.</li>
+<li>Sea \(\mathbf{C}=\mathbf{Set}\), y sea \(\mathbf{D}=\mathbf{Top}\). Sea \(F\colon \mathbf{Set}\to \mathbf{Top}\) donde \(F(X)\) sea el espacio topológico \((X,\mathcal{P}(X))\). Sean \(X,Y\in \mathrm{obj} \mathbf{Set}\), y sea \(f\colon X\to Y\) una función. Definimos \(F(f)\) como \(f\).</li>
+<li>Sea \(\mathbf{C}=\mathbf{Grp}\) y sea \(\mathbf{D}=\mathbf{Set}\). Definimos \(F\colon \mathbf{Grp}\to \mathbf{Set}\) donde \(F(G)\) sea \(G\). Para cada \(f\colon G_{1}\to G_{2}\), definimos \(F(f)\) como \(f\). Como el funtor \(F\) olvida la estructura de grupo en \(G\), decimos que \(F\) es un <b>funtor olvidadizo</b>. También existe un funtor olvidadizo \(\mathbb{R}\mathbf{Vect}\to \mathbf{AbGrp}\).</li>
+<li>Sea \(\mathbf{C}=\mathbf{Grp}\), y sea \(\mathbf{D}=\mathbf{AbGrp}\). Recordemos que con \(G'\leq G\) se denota el subgrupo generado por \(\{a^{-1}b^{-1}ab\mid a,b\in G\}\). Se tiene que en general, \(G'\) es un subgrupo normal y \(G/G'\) es abeliano. Definimos \(F\colon \mathbf{Grp}\to \mathbf{AbGrp}\) como \(F(G)=G/G'\). Sea \(f\colon G\to H\) un morfismo de grupos. Queremos definir \(F(f)\colon G/G'\to H/H'\). Como se cumple \(f(G')\subseteq H'\), se puede definir \(F(f)(gG')=f(g)H'\).</li>
+<li>Un funtor \(\Delta\colon \mathbf{Graph}\to \mathbf{SimpComp}\), donde, si \(G\) es una gráfica (es decir, un objeto de la categoría \(\mathbf{Graph}\)), definimos a \(\Delta(G)\) como el complejo simplicial de completas de la gráfica \(G\). Si \(f\colon G_{1}\to G_{2}\) es un morfismo de gráficas (de modo que \(v_{1}\sim v_{2}\) implica \(f(v_{1})\sim f(v_{2})\) o \(f(v_{1})=f(v_{2})\)), definimos \(\Delta(f)\colon \Delta(G_{1})\to \Delta(G_{2})\) como \(\Delta(f)(\sigma)= f(\sigma)\).</li>
+<li>Un funtor \(|\cdot|\colon \mathbf{SimpComp}\to \mathbf{Top}\) dado por la realización geométrica. Es decir, dado \(\Delta\) un complejo simplicial, le podemos asociar un espacio topológico \(|\Delta|\). Dado un mapeo simplicial \(f\colon \Delta_{1}\to \Delta_{2}\), anteriormente le asociamos una función continua \(|f|\colon |\Delta_{1}|\to |\Delta_{2}|\).</li>
+<li>Para cada \(n\geq 0\), definiremos un funtor \(H_{n}\colon \mathbf{SimpComp}\to \mathbf{AbGrp}\) que se llama la <b>homología</b>.</li>
 </ul>
+</div>
+</div>
+
+<div id="outline-container-org40f7197" class="outline-2">
+<h2 id="org40f7197"><span class="section-number-2">3</span> Isomorfismos</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Sea \(\mathbf{C}\) una categoría. Un morfismo \(f\colon A\to B\) entre objetos de \(\mathbf{C}\) es un <b>isomorfismo</b> si existe un morfismo en \(\mathbf{C}\) \(g\colon B\to A\) tal que \(g\circ f=1_{A}\) y \(f\circ g=1_{B}\).
+</p>
+
+<p>
+<b>Ejercicio</b> Demuestra que si \(F\colon \mathbf{C}\to \mathbf{D}\) es un funtor, y \(f\) es un isomorfismo, entonces \(F(f)\) es un isomorfismo.
+</p>
 </div>
 </div>
