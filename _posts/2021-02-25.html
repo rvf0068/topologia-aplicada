@@ -1,0 +1,125 @@
+---
+layout: post
+title: Homología
+date: 2021-02-25 15:00 -0500 
+comments: true
+published: true
+categories: 
+---
+
+
+<div id="outline-container-org90809eb" class="outline-2">
+<h2 id="org90809eb"><span class="section-number-2">1</span> Idea</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Sea \(C\subseteq \mathbb{R}^{n}\) un conjunto finito. Una idea para estudiar \(C\) es asociarle un complejo simplicial, por ejemplo \(\mathcal{N}_{\epsilon}(C)\). Sabemos \(\mathcal{N}_{\epsilon}(C)\) es homotópico a la unión de las bolas con centros en puntos \(C\), con radio \(\epsilon\). Quisiéramos encontrar una manera de simplificar el tipo de homotopía de \(\mathcal{N}_{\epsilon}(C)\). En general, no se conoce un algoritmo que se pueda aplicar a todos los complejos simpliciales para calcular el tipo de homotopía, y que sea computacionalmente adecuado para complejos de muchos vértices.
+</p>
+
+<p>
+La homología nos da una herramienta para determinar ciertos aspectos topológicos de un complejo simplicial, es aplicable en general y no es computacionalmente tan pesada. La homología es una familia de funtores de la categoría de complejos simpliciales a una categoría algebraica.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgee69ffe" class="outline-2">
+<h2 id="orgee69ffe"><span class="section-number-2">2</span> Definiciones</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orga46dc1c" class="outline-3">
+<h3 id="orga46dc1c"><span class="section-number-3">2.1</span> Permutaciones pares e impares</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Una <b>permutación</b> es una función biyectiva \(f\colon\{1,2,\ldots,n\}\to\{1,2,\ldots,n\}\). Cada permutación se puede escribir como producto de ciclos. Por ejemplo, si \(n=6\), la permutación \((15)(346)\), es la función \(1\mapsto 5, 2\mapsto 2, 3\mapsto 4, 4\mapsto 6, 5\mapsto 1, 6\mapsto 3\). Una <b>transposición</b> es una permutación que intercambia dos números y a los demás los deja fijos, es decir una permutación que en notación cíclica se escribe \((ab)\). Toda permutación se puede escribir como producto de transposiciones. Por ejemplo \((15)(346)=(15)(34)(46)\).
+</p>
+
+<p>
+<b>Teorema</b> Si una permutación se puede escribir como producto de una cantidad par de transposiciones, entonces no se puede escribir como producto de una cantidad impar de transposiciones.
+</p>
+
+<p>
+Si una permutación se puede escribir como producto de una cantidad par de transposiciones, decimos que la permutación es <b>par</b>. Si no, decimos que la permutación es <b>impar</b>.
+</p>
+
+<p>
+Por ejemplo, la permutación \((15)(346)\) es impar. Un ciclo \((a_{1}a_{2}\cdots a_{n})\) es una permutación par si \(n\) es impar, y es una permutación impar si \(n\) es par.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6b65e1b" class="outline-3">
+<h3 id="org6b65e1b"><span class="section-number-3">2.2</span> Simplejos orientados</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Sea \(\Delta\) un complejo simplicial. Supongamos que damos un orden total a los vértices de \(\Delta\). Un <b>\(p\)-simplejo ordenado</b> es \((v_{0},v_{1},\ldots,v_{p})\) tal que \(\{v_{0},v_{1},\ldots,v_{p}\}\) es un simplejo de dimensión \(p\) en \(\Delta\). Supongamos que \((w_{0},w_{1},\ldots,w_{p})\) es un \(p\)-simplejo ordenado tal que \(\{w_{0},w_{1},\ldots,w_{p}\}=\{v_{0},v_{1},\ldots,v_{p}\}\). Diremos que la orientación es la misma, si la permutación \(v_{i}\to w_{i}\) para \(i=0,1,\ldots,p\) es par. En caso contrario, diremos que los simplejos orientados tienen <b>orientación opuesta</b>.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org799a3d9"></a>Ejemplo<br />
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+Sea \(\Delta\) el complejo simplicial con caras maximales \(\{\{1,2,3\},\{3,4\},\{2,4\}\}\). Entonces:
+</p>
+<ul class="org-ul">
+<li>\((1,2,3), (2,1,3)\) tienen orientación opuesta,</li>
+<li>\((1,2,3), (3,1,2)\) tienen la misma orientación,</li>
+<li>\((2,4), (4,2)\) tienen diferente orientación.</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org0b7ef1e"></a>Notación<br />
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+El simplejo orientado \((v_{0},v_{1},\ldots,v_{p})\) se denotará \(v_{0}\wedge v_{1}\wedge\cdots\wedge v_{n}\). (Debe interpretarse, que \(2\wedge 4= -4\wedge 2\), y \(1\wedge 2\wedge 3=3\wedge 1\wedge 2\)).
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org48982f8" class="outline-3">
+<h3 id="org48982f8"><span class="section-number-3">2.3</span> Cadenas</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+<b>Notación</b> Un simplejo \(\sigma\) cuando está orientado se denotará con \(\hat{\sigma}\).
+</p>
+
+<p>
+Sea \(\Delta^{p}\) el conjunto de todos los \(p\)-simplejos orientados. Sea \(R\in\{\mathbb{Z},\mathbb{Q}, \mathbb{R},\mathbb{C},\mathbb{F}_{2}\}\). Una \(p\)-<b>cadena</b> es una función \(c\colon \Delta^{p}\to R\) tal que \(c(\hat{\sigma})=-c(\hat{\sigma'})\) si \(\sigma=\sigma'\), pero \(\hat{\sigma}\) tiene orientación diferente a \(\hat{\sigma'}\).
+</p>
+
+<p>
+<b>Ejemplo</b>
+Sea \(\Delta\) el complejo simplicial con caras maximales \(\{\{1,2,3\},\{3,4\},\{2,4\}\}\).
+Sea \(R=\mathbb{Z}\). Una 1-cadena \(c\) está dada por: \(1\wedge 2\mapsto 3\), \(1\wedge 3\mapsto 4\), \(2\wedge 3\mapsto -4\), \(3\wedge 4\mapsto -1\), \(2\wedge 4\mapsto 0\). En particular \(c(2\wedge 1)=-3\), \(c(4\wedge 2)=0\).
+</p>
+
+<p>
+Para determinar una 2-cadena, definamos \(c'(1\wedge 2\wedge 3)=1\). Esto determina \(c'(2\wedge 3\wedge 1)=1\) y \(c'(2\wedge 1\wedge 3)=-1\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6577f9a" class="outline-3">
+<h3 id="org6577f9a"><span class="section-number-3">2.4</span> Grupo de cadenas</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Si \(c\) y \(c'\) son dos \(p\)-cadenas, definimos \((c+c')(\hat{\sigma})=c(\hat{\sigma})+c'(\hat{\sigma})\). La colección de todas las \(p\)-cadenas \(C_{p}(\Delta,R)\) forma un grupo con esta operación. Más aún, si \(R\) es un campo, entonces a \(C_{p}(\Delta,R)\) se le puede dar estructura de un espacio vectorial.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb246366" class="outline-3">
+<h3 id="orgb246366"><span class="section-number-3">2.5</span> Cadenas elementales</h3>
+</div>
+
+<div id="outline-container-org60e857b" class="outline-3">
+<h3 id="org60e857b"><span class="section-number-3">2.6</span> Operadores frontera</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+\(C_{p+1}(\Delta,R)\to C_{p}(\Delta,R)\to C_{p-1}(\Delta,R)\) 
+</p>
+</div>
+</div>
+</div>
