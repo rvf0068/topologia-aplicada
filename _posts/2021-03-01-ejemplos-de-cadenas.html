@@ -1,0 +1,112 @@
+---
+layout: post
+title: Ejemplos de cadenas
+date: 2021-03-01 15:00 -0500 
+comments: true
+published: true
+categories: 
+---
+
+<p>
+Consideremos el complejo simplicial \(\Delta\) cuyo conjunto de caras maximales es \(\mathcal{F}(\Delta)=\{123,24,34\}\).
+</p>
+
+
+<div id="org4ed6748" class="figure">
+<p><img src="{{ site.baseurl }}/images/ejemplo-complejo.png" alt="ejemplo-complejo" width="400" align="center" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Complejo simplicial \(\Delta\) <div id="ejemplo-complejo"></div></p>
+</div>
+
+<p>
+Escribamos listas de simplejos de \(\Delta\) de acuerdo a su dimensión:
+</p>
+
+<ul class="org-ul">
+<li>(-1)-simplejo: \(\emptyset\).</li>
+<li>0-simplejos: 1,2,3,4.</li>
+<li>1-simplejos: 12, 13, 23, 24, 34.</li>
+<li>2-simplejo: 123.</li>
+</ul>
+
+<p>
+Ahora, escribamos listas de simplejos orientados de \(\Delta\).
+</p>
+
+<ul class="org-ul">
+<li>(-1)-simplejo orientado: \(\emptyset\).</li>
+<li>0-simplejos orientados: 1,2,3,4.</li>
+<li>1-simplejos orientados: \(1\wedge 2, 1\wedge 3, 2\wedge 3, 2\wedge 4, 3\wedge 4, 2\wedge 1, 3\wedge 1, 3\wedge 2, 4\wedge 2, 4\wedge 3\).</li>
+<li>2-simplejos orientados: \(1\wedge 2\wedge 3, 1\wedge 3\wedge 2\).</li>
+</ul>
+
+<p>
+Recordemos que si \(R\in\{\mathbb{Z},\mathbb{Q}, \mathbb{R},\mathbb{C},\mathbb{F}_{2}\}\). Una \(p\)-<b>cadena</b> es una función \(c\colon \Delta^{p}\to R\) tal que \(c(\hat{\sigma})=-c(\hat{\sigma'})\) si \(\sigma=\sigma'\), pero \(\hat{\sigma}\) tiene orientación diferente a \(\hat{\sigma'}\).
+</p>
+
+<p>
+Representemos una cadena como una matriz con dos renglones, donde en el primer renglón colocaremos a los elementos del dominio (los simplejos orientados) y en el segundo renglón pondremos los valores asociados.
+</p>
+
+<p>
+Por ejemplo:
+</p>
+\begin{equation}
+\begin{pmatrix}
+1 & 2 & 3 & 4\\
+-3 & 2 & 0 & -1
+\end{pmatrix}
+\end{equation}
+<p>
+es una 0-cadena,
+</p>
+\begin{equation}
+\begin{pmatrix}
+1\wedge 2& 1\wedge 3& 2\wedge 3& 2\wedge 4& 3\wedge 4& 2\wedge 1& 3\wedge 1& 3\wedge 2& 4\wedge 2& 4\wedge 3\\
+-3 & 2 & 0 & -2 & 10 & 3 & -2 & 0 & 2 & -10
+\end{pmatrix}
+\end{equation}
+<p>
+es una 1-cadena, y
+</p>
+\begin{equation}
+\begin{pmatrix}
+1\wedge 2\wedge 3& 1\wedge 3\wedge 2\\
+3 & -3
+\end{pmatrix}
+\end{equation}
+<p>
+es una 2-cadena.
+</p>
+
+<p>
+Hay varias simplificaciones que podemos hacer a la notación. Por ejemplo, en la 1-cadena \eqref{eq-1-cadena}, se puede no escribir las segundas cinco entradas, ya que están determinadas por las primeras cinco entradas. Es decir, tal cadena podría haberse escrito simplemente como:
+</p>
+\begin{equation}
+\begin{pmatrix}
+1\wedge 2& 1\wedge 3& 2\wedge 3& 2\wedge 4& 3\wedge 4\\
+-3 & 2 & 0 & -2 & 10\\
+\end{pmatrix}
+\end{equation}
+
+<p>
+Similarmente, una 2-cadena como <a href="#eq-2-cadena">eq-2-cadena</a> está determinada por su valor en \(1\wedge 2\wedge 3\).
+</p>
+
+<p>
+Dos \(p\)-cadenas se pueden sumar, obteniendo otra \(p\)-cadena. También se pueden multiplicar por elementos de \(R\).
+</p>
+
+<p>
+Cada simplejo orientado determina una cadena. Por ejemplo, \(1\wedge 3\) determina:
+</p>
+\begin{equation}
+\begin{pmatrix}
+1\wedge 2& 1\wedge 3& 2\wedge 3& 2\wedge 4& 3\wedge 4\\
+0 & 1 & 0 & 0 & 0\\
+\end{pmatrix}
+\end{equation}
+
+<p>
+Estas cadenas se llaman <b>cadenas elementales</b>. La cadena elemental <a href="#eq-1-cadena-elemental-ejemplo">eq-1-cadena-elemental-ejemplo</a> se denotará simplemente como \(1\wedge 3\). 
+</p>

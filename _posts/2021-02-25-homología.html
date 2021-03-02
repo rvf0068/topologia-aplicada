@@ -90,6 +90,11 @@ Sea \(\Delta^{p}\) el conjunto de todos los \(p\)-simplejos orientados. Sea \(R\
 </p>
 
 <p>
+<b>El campo \(\mathbb{F}_{2}\).</b>
+Consideremos \(\mathbb{F}_{2}=\{0,1\}\). Definimos una suma en \(\mathbb{F}_{2}\) como \(0+0=0\), \(1+0=0+1=1\), \(1+1=0\). Definimos un producto como \(a0=a0=0\) para todo \(a\in \mathbb{F}_{2}\), \(11=1\). Entonces \(\mathbb{F}_{2}\) con esta suma y producto, satisface los axiomas de campo. Notemos que como \(1+1=0\), entonces \(1=-1\). Por lo que si \(R=\mathbb{F}_{2}\),  no es necesario para la definición de homología considerar orientaciones.
+</p>
+
+<p>
 <b>Ejemplo</b>
 Sea \(\Delta\) el complejo simplicial con caras maximales \(\{\{1,2,3\},\{3,4\},\{2,4\}\}\).
 Sea \(R=\mathbb{Z}\). Una 1-cadena \(c\) está dada por: \(1\wedge 2\mapsto 3\), \(1\wedge 3\mapsto 4\), \(2\wedge 3\mapsto -4\), \(3\wedge 4\mapsto -1\), \(2\wedge 4\mapsto 0\). En particular \(c(2\wedge 1)=-3\), \(c(4\wedge 2)=0\).
@@ -112,13 +117,37 @@ Si \(c\) y \(c'\) son dos \(p\)-cadenas, definimos \((c+c')(\hat{\sigma})=c(\hat
 
 <div id="outline-container-orgafe82f3" class="outline-3">
 <h3 id="orgafe82f3"><span class="section-number-3">2.5</span> Cadenas elementales</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Cada \(p\)-simplejo orientado \(\hat{\sigma}\) determina una \(p\)-cadena, donde la \(p\)-cadena asociada a \(\hat{\sigma}\) se define como \(1\) en el simplejo orientado \(\hat{\sigma}\), \(-1\) en el simplejo orientado \(\hat{\sigma'}\) y 0 en los demás simplejos orientados. Tal cadena se llama una <b>\(p\)-cadena elemental</b>. La cadena elemental determinada por el simplejo orientado \(\hat{\sigma}\) se denotará con \(\hat{\sigma}\).
+</p>
+
+<p>
+Se puede demostrar que si para cada \(p\)-simplejo escogemos una orientación, las \(p\)-cadenas elementales así obtenidas forman una base de \(C_{p}(\Delta,R)\) cuando \(R\) es un campo. Es decir, \(\dim C_{p}(\Delta,R)=f_{p}\) (donde \(f\) es el \(f\)-vector). <b>Ejercicio</b> Demostrar lo que se afirma en este párrafo.
+</p>
+
+<p>
+(Si \(R=\mathbb{Z}\), entonces se obtiene una base, y se muestra que \(C_{p}(\Delta,\mathbb{Z})\) es un grupo abeliano <b>libre</b>).
+</p>
+</div>
 </div>
 
 <div id="outline-container-orgcdbbf89" class="outline-3">
 <h3 id="orgcdbbf89"><span class="section-number-3">2.6</span> Operadores frontera</h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
-\(C_{p+1}(\Delta,R)\to C_{p}(\Delta,R)\to C_{p-1}(\Delta,R)\) 
+Sea \(\hat{\sigma}=v_{0}\wedge v_{1}\wedge\cdots\wedge v_{p}\) una \(p\)-cadena elemental. Definimos la <b>frontera</b> de \(\hat{\sigma}\) como:
+</p>
+\begin{equation}
+\partial_{p}(\hat{\sigma})=\sum_{i=0}^{p}(-1)^{i}v_{0}\wedge v_{1}\wedge\cdots\wedge \hat{v_{i}}\wedge\cdots \wedge v_{p}.
+\end{equation}
+
+<p>
+Esta definición se extiende linealmente para obtener una transformación lineal \(\partial_{p}\colon C_{p}(\Delta,R)\to C_{p-1}(\Delta,R)\).
+</p>
+
+<p>
+<b>Ejemplo</b>. Consideremos \(1\wedge 2\wedge 3\in C_{2}(\Delta,R)\). Tenemos que \(\partial_{2}(1\wedge 2\wedge 3)=(-1)^{0}2\wedge 3+(-1)^{1}1\wedge 3+(-1)^{2}1\wedge 2=2\wedge 3-1\wedge 3+1\wedge 2\).
 </p>
 </div>
 </div>
