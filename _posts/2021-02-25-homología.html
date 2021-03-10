@@ -112,6 +112,10 @@ Para determinar una 2-cadena, definamos \(c'(1\wedge 2\wedge 3)=1\). Esto determ
 <p>
 Si \(c\) y \(c'\) son dos \(p\)-cadenas, definimos \((c+c')(\hat{\sigma})=c(\hat{\sigma})+c'(\hat{\sigma})\). La colección de todas las \(p\)-cadenas \(C_{p}(\Delta,R)\) forma un grupo con esta operación. Más aún, si \(R\) es un campo, entonces a \(C_{p}(\Delta,R)\) se le puede dar estructura de un espacio vectorial.
 </p>
+
+<p>
+Si \(p>\dim\Delta\), definimos \(C_{p}(\Delta,R)=0\) (el espacio cero).
+</p>
 </div>
 </div>
 
@@ -143,11 +147,52 @@ Sea \(\hat{\sigma}=v_{0}\wedge v_{1}\wedge\cdots\wedge v_{p}\) una \(p\)-cadena 
 \end{equation}
 
 <p>
-Esta definición se extiende linealmente para obtener una transformación lineal \(\partial_{p}\colon C_{p}(\Delta,R)\to C_{p-1}(\Delta,R)\).
+Esta definición se extiende linealmente para obtener una transformación lineal \(\partial_{p}\colon C_{p}(\Delta,R)\to C_{p-1}(\Delta,R)\). <b>Observación</b> Hay que checar la definición de frontera no depende de la orientación escogida, es decir que \(\partial_{p} \hat{\sigma}=-\partial_{p} \hat{\sigma'}\).
 </p>
 
 <p>
-<b>Ejemplo</b>. Consideremos \(1\wedge 2\wedge 3\in C_{2}(\Delta,R)\). Tenemos que \(\partial_{2}(1\wedge 2\wedge 3)=(-1)^{0}2\wedge 3+(-1)^{1}1\wedge 3+(-1)^{2}1\wedge 2=2\wedge 3-1\wedge 3+1\wedge 2\).
+<b>Ejemplo</b>. Consideremos \(1\wedge 2\wedge 3\in C_{2}(\Delta,R)\). Tenemos que \(\partial_{2}(1\wedge 2\wedge 3)=(-1)^{0}2\wedge 3+(-1)^{1}1\wedge 3+(-1)^{2}1\wedge 2=2\wedge 3-1\wedge 3+1\wedge 2\). Además \(\partial_{2} (1\wedge 3\wedge 2)=(-1)^{0} 3\wedge 2+(-1)^{1}1\wedge 2+(-1)^{2}1\wedge 3=3\wedge 2-1\wedge 2+1\wedge 3=-\partial_{2}(1\wedge 2\wedge 3)\).
+</p>
+
+<p>
+Si \(\hat{\sigma}=v_{0}\in C_{0}(\Delta,R)\), definimos \(\partial_{0}(\hat{\sigma})=1\in R=C_{-1}(\Delta,R)\).
+</p>
+
+<p>
+<b>Teorema</b> La composición de \(\partial_{p+1}\colon C_{p+1}(\Delta,R)\to C_{p}(\Delta,R)\) con \(\partial_{p}\colon C_{p}(\Delta,R)\to C_{p-1}(\Delta,R)\) es cero para \(p\geq 0\). Es decir \(\partial_{p}\circ\partial_{p+1}=0\).
+</p>
+
+<p>
+<b>Ejemplo</b> \(\partial_{1}\partial_{2}(1\wedge 2\wedge 3)=\partial_{1}(2\wedge 3)-\partial_{1}(1\wedge 3)+\partial_{1}(1\wedge 2)=(3-2)-(3-1)+(2-1)=0\).
+\(\partial_{0}\partial_{1}(a\wedge b)=\partial_{0}(b-a)=\partial_{0}(b)-\partial_{0}(a)=1-1=0\).
+</p>
+
+<p>
+<b>Ejercicio</b> Demuestra que \(\partial_{2}\partial_{3}(a\wedge b\wedge c\wedge d)=0\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0ba5e3" class="outline-3">
+<h3 id="orge0ba5e3"><span class="section-number-3">2.7</span> Espacio de ciclos y espacio de fronteras.</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+<b>Definición</b> Para cada \(p\geq 0\), el <b>\(p\)-espacio de ciclos</b> \(Z_{p}(\Delta,R)\) es \(\ker\partial_{p}\). El <b>\(p\)-espacio de fronteras</b> \(B_{p}(\Delta,R)\) es \(\mathrm{im}\partial_{p+1}\). Nótese que ambos son subespacios de \(C_{p}(\Delta,R)\). Por el teorema anterior
+</p>
+\begin{equation}
+B_{p}(\Delta,R) \leq Z_{p}(\Delta,R).
+\end{equation}
+<p>
+[pues si \(c\in B_{p}(\Delta, R)\), existe \(d\in C_{p+1}(\Delta,R)\) tal que \(\partial_{p+1}(d)=c\). Entonces \(\partial_{p}(c)=\partial_{p}(\partial_{p+1}(d))=0\)]
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd426e10" class="outline-3">
+<h3 id="orgd426e10"><span class="section-number-3">2.8</span> Homología</h3>
+<div class="outline-text-3" id="text-2-8">
+<p>
+Para \(p\geq 0\), la <b>\(p\)-homología (reducida)</b> de \(\Delta\) con coeficientes en \(R\) es el cociente \(Z_{p}(\Delta,R)/B_{p}(\Delta,R)\).
 </p>
 </div>
 </div>
