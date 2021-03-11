@@ -19,7 +19,7 @@ na=
 \begin{cases}
 a+a+\cdots+a & \text{si \(n>0\)},\\
 0 & \text{si \(n=0\)},\\
-(-n)a & \text{si \(n<0\)}
+-(-n)a & \text{si \(n<0\)}
 \end{cases}
 \end{equation}
 <p>
@@ -34,3 +34,19 @@ En un grupo abeliano, cualquier subgrupo \(B\leq A\) es normal. Los elementos de
 Recordemos:
 \(a_{1}\sim a_{2}\) si \(a_{1}-a_{2}\in B\) define una relación de equivalencia en \(A\) donde las clases son las clases laterales.
 </p>
+
+<p>
+<i>Ejemplos:</i>
+</p>
+<ul class="org-ul">
+<li>Sabemos que si \(A=\mathbb{Z}\), todo subgrupo de \(A\) es de la forma \(n\mathbb{Z}=\{na\mid a\in \mathbb{Z}\}\) para algún entero positivo \(n\) (puesto que todo subgrupo de un grupo cíclico es cíclico). En este caso, la relación \(a_{1}\sim a_{2}\) si y solo si \(a_{1}-a_{2}\in n\mathbb{Z}\) se traduce en que \(a_{1}\sim a_{2}\) si y solo si existe \(u\in \mathbb{Z}\) tal que \(a_{1}-a_{2}=nu\). Y esto a su vez quiere decir \(a_{1}\equiv a_{2} \mod n\) . Cada clase de equivalencia de acuerdo a ésta relación es una clase lateral, y podemos escoger a \(0,1,2,\ldots,n-1\) como representantes  de las clases. Por lo tanto el grupo \(\mathbb{Z}/n\mathbb{Z}=\{\overline{0},\overline{1},\ldots,\overline{n-1}\}\).</li>
+
+<li>Si \(A,B\) son grupos abelianos, definimos \(A\oplus B=\{(a,b)\mid a\in A, b\in B\}\). La operación se define como \((a_{1},b_{1})+(a_{2},b_{2})=(a_{1}+a_{2},b_{1}+b_{2})\). Con ésta operación, se tiene un grupo abeliano.</li>
+
+<li>Consideremos el grupo abeliano \(\mathbb{Z}\oplus \mathbb{Z}=\{(a,b)\mid a,b\in \mathbb{Z}\}\). Este grupo tiene subgrupos de la forma \(m\mathbb{Z}\oplus n\mathbb{Z}\). En este caso, el cociente es \((\mathbb{Z}\oplus \mathbb{Z})/(m\mathbb{Z}\oplus n\mathbb{Z})=(\mathbb{Z}/m\mathbb{Z})\oplus (\mathbb{Z}/n\mathbb{Z})\).
+[La demostración se puede hacer usando el primer teorema de isomorfismos: Si \(f\colon A\to B\) es un morfismo de grupos suprayectivo, entonces \(A/\ker f\cong B\)].</li>
+
+<li>Consideremos el subgrupo de \(A=\mathbb{Z}\oplus \mathbb{Z}\) dado por \(B=\{(a,a)\mid a\in \mathbb{Z}\}\). En este caso, el cociente \(A/B\) se puede obtener usando el morfismo \(f\colon A\to \mathbb{Z}\) dado por \(f(a,b)=a-b\). Este morfismo es suprayectivo y su kernel es \(B\). Por lo tanto, \(A/B\cong \mathbb{Z}\) por el primer teorema de isomorfismos, donde el isomorfismo está dado por \(\overline{f}(\overline{(a,b)})=f(a,b)=a-b\). Como \(\overline{f}(\overline{(1,0)})=1\), se tiene que \(A/B=\langle \overline{(1,0)}\rangle\). Esto implica que toda clase de \(A/B\) se puede representar por un elemento de la forma \((a,0)\). Como ejercicio, encuentra el representante de la clase de \((a,b)\).</li>
+
+<li>Consideremos el subgrupo de \(A=\mathbb{Z}\oplus \mathbb{Z}\) dado por \(B=\{a(-2,2)+b(2,4)\mid a,b\in \mathbb{Z}\}\). El cociente de \(A/B\) es:</li>
+</ul>
