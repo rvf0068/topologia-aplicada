@@ -1,0 +1,109 @@
+---
+layout: post
+title: Otro cálculo de homología
+date: 2021-03-18 15:00 -0500 
+comments: true
+published: true
+categories: 
+---
+
+<p>
+Consideremos el complejo simplicial \(\Delta\) cuyo conjunto de caras maximales es \(\mathcal{F}(\Delta)=\{abc,bcd\}\).
+</p>
+
+
+<div id="org0fb22a5" class="figure">
+<p><img src="{{ site.baseurl }}/images/tercero-ejemplo.png" alt="tercero-ejemplo" width="400" align="center" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Ejemplo <div id="tercero-ejemplo"></div></p>
+</div>
+
+<div id="outline-container-org15fd78f" class="outline-2">
+<h2 id="org15fd78f"><span class="section-number-2">1</span> Cálculo de \(H_{0}\)</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Calculemos \(H_{0}(\Delta, R)=Z_{0}(\Delta,R)/B_{0}(\Delta,R)\). En este caso \(Z_{0}(\Delta,R)=\ker\partial_{0}\), donde \(\partial_{0}\colon C_{0}(\Delta,R)\to C_{-1}(\Delta,R)=R\). La matriz (respecto a las bases usuales) de \(\partial_{0}\) es \((1 1 1 1)\). Un conjunto de generadores del espacio nulo de esta matriz es \((1,-1,0,0) (1,0,-1,0) (1,0,0,-1)\), los cuales se corresponden con \(a-b, a-c, a-d\).
+</p>
+
+<p>
+Calculemos \(B_{0}(\Delta,R)\), es decir, la imagen de \(\partial_{1}\colon C_{1}(\Delta,R)\to C_{0}(\Delta,R)\). Tenemos que \(\partial_{1}(b\wedge a)=a-b\), \(\partial_{1}(c\wedge a)=a-c\), \(\partial_{1}(c\wedge a+d\wedge c)=(a-c)+(c-d)=a-d\). Esto implica que \(Z_{0}(\Delta,R)=B_{0}(\Delta,R)\), por lo tanto \(H_{0}(\Delta,R)=0\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0991e84" class="outline-2">
+<h2 id="org0991e84"><span class="section-number-2">2</span> Cálculo de \(H_{1}\).</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Calculemos \(H_{1}(\Delta, R)=Z_{1}(\Delta,R)/B_{1}(\Delta,R)\). Consideremos la frontera \(\partial_{1}\colon C_{1}(\Delta,R)\to C_{0}(\Delta,R)\). En las bases dadas por las cadenas elementales, esa transformación lineal tiene matriz:
+</p>
+
+
+<div id="org8870d4f" class="figure">
+<p><img src="{{ site.baseurl }}/images/otra-matriz-delta-1.png" alt="otra-matriz-delta-1" width="600" align="center" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Matriz de \(\partial_{1}\) <div id="otra-matriz-delta-1"></div></p>
+</div>
+
+<p>
+El espacio nulo está generado por \((1,-1,1,0,0)^{T},(-1,1,0,-1,1)^{T}\). El primer vector se corresponde con \(a\wedge b-a\wedge c+b\wedge c\). El segundo vector se corresponde con \(-a\wedge b+a\wedge c-b\wedge d +c\wedge d\). Estos dos son generadores de \(Z_{1}(\Delta,R)\).
+</p>
+
+<p>
+El espacio \(B_{1}(\Delta,R)\) es la imagen de la frontera \(\partial_{2}\colon C_{2}(\Delta,R)\to C_{1}(\Delta, R)\). Esta frontera tiene matriz:
+</p>
+
+
+<div id="org6447e41" class="figure">
+<p><img src="{{ site.baseurl }}/images/otra-matriz-delta-2.png" alt="otra-matriz-delta-2" width="300" align="center" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Matriz de \(\partial_{2}\) <div id="otra-matriz-delta-2"></div></p>
+</div>
+
+<p>
+Tenemos que \(\partial_{2}(a\wedge b\wedge c)=a\wedge b - a\wedge c+b\wedge c\), y
+también que \(\partial_{2}(b\wedge c\wedge d)=c\wedge d - b\wedge d+b\wedge c\).
+Estos dos vectores generan a \(B_{1}(\Delta,R)\). Por lo tanto \(B_{1}(\Delta,R)=\langle a\wedge b - a\wedge c+b\wedge c, c\wedge d - b\wedge d+b\wedge c \rangle\).
+</p>
+
+<p>
+Tenemos entonces que el cociente \(Z_{1}(\Delta,R)/B_{1}(\Delta,R)\) está generado por
+</p>
+
+<ul class="org-ul">
+<li>\(\overline{a\wedge b-a\wedge c+b\wedge c}=\overline{0}\) (pues \(\partial_{2}(a\wedge b\wedge c)=a\wedge b - a\wedge c+b\wedge c\))</li>
+<li>\(\overline{-a\wedge b+a\wedge c-b\wedge d +c\wedge d}=\overline{0}\). (pues \(\partial_{2}(b\wedge c\wedge d-a\wedge b\wedge c)=-a\wedge b+a\wedge c-b\wedge d +c\wedge d\)).</li>
+</ul>
+
+<p>
+Como sus dos generadores son \(\overline{0}\), se obtiene que \(H_{1}(\Delta,R)\) es el grupo trivial.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org926bea0" class="outline-2">
+<h2 id="org926bea0"><span class="section-number-2">3</span> Cálculo de \(H_{2}\)</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Calculemos \(H_{2}(\Delta, R)=Z_{2}(\Delta,R)/B_{2}(\Delta,R)\). En este caso \(Z_{2}(\Delta,R)=\ker\partial_{2}=0\). Además \(B_{2}(\Delta,R)\) es la imagen de \(\partial_{3}\colon C_{3}(\Delta,R)\to C_{2}(\Delta,R)\), por lo que \(B_{2}(\Delta,R)=0\) (pues \(C_{3}(\Delta,R)=0\)). Por lo tanto \(H_{2}(\Delta,R)=0\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8cd9668" class="outline-2">
+<h2 id="org8cd9668"><span class="section-number-2">4</span> Resumen</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+\(H_{p}(\Delta,R)=0\) para todo \(p\geq0\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org86fa820" class="outline-2">
+<h2 id="org86fa820"><span class="section-number-2">5</span> Teorema de invariancia de homotopía</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<b>Teorema</b> Sean \(\Delta_{1}\) y \(\Delta_{2}\) complejos simpliciales tales que \(|\Delta_{1}|\simeq |\Delta_{2}|\). Entonces \(H_{p}(\Delta_{1},R)\cong H_{p}(\Delta_{2},R)\) para todo \(p\geq0\).
+</p>
+</div>
+</div>

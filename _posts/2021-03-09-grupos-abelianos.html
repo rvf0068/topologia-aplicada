@@ -43,10 +43,24 @@ Recordemos:
 
 <li>Si \(A,B\) son grupos abelianos, definimos \(A\oplus B=\{(a,b)\mid a\in A, b\in B\}\). La operación se define como \((a_{1},b_{1})+(a_{2},b_{2})=(a_{1}+a_{2},b_{1}+b_{2})\). Con ésta operación, se tiene un grupo abeliano.</li>
 
-<li>Consideremos el grupo abeliano \(\mathbb{Z}\oplus \mathbb{Z}=\{(a,b)\mid a,b\in \mathbb{Z}\}\). Este grupo tiene subgrupos de la forma \(m\mathbb{Z}\oplus n\mathbb{Z}\). En este caso, el cociente es \((\mathbb{Z}\oplus \mathbb{Z})/(m\mathbb{Z}\oplus n\mathbb{Z})=(\mathbb{Z}/m\mathbb{Z})\oplus (\mathbb{Z}/n\mathbb{Z})\).
+<li>Consideremos el grupo abeliano \(\mathbb{Z}\oplus \mathbb{Z}=\{(a,b)\mid a,b\in \mathbb{Z}\}\). Este grupo tiene subgrupos de la forma \(m\mathbb{Z}\oplus n\mathbb{Z}\). En este caso, el cociente es \((\mathbb{Z}\oplus \mathbb{Z})/(m\mathbb{Z}\oplus n\mathbb{Z})\cong(\mathbb{Z}/m\mathbb{Z})\oplus (\mathbb{Z}/n\mathbb{Z})\).
 [La demostración se puede hacer usando el primer teorema de isomorfismos: Si \(f\colon A\to B\) es un morfismo de grupos suprayectivo, entonces \(A/\ker f\cong B\)].</li>
 
 <li>Consideremos el subgrupo de \(A=\mathbb{Z}\oplus \mathbb{Z}\) dado por \(B=\{(a,a)\mid a\in \mathbb{Z}\}\). En este caso, el cociente \(A/B\) se puede obtener usando el morfismo \(f\colon A\to \mathbb{Z}\) dado por \(f(a,b)=a-b\). Este morfismo es suprayectivo y su kernel es \(B\). Por lo tanto, \(A/B\cong \mathbb{Z}\) por el primer teorema de isomorfismos, donde el isomorfismo está dado por \(\overline{f}(\overline{(a,b)})=f(a,b)=a-b\). Como \(\overline{f}(\overline{(1,0)})=1\), se tiene que \(A/B=\langle \overline{(1,0)}\rangle\). Esto implica que toda clase de \(A/B\) se puede representar por un elemento de la forma \((a,0)\). Como ejercicio, encuentra el representante de la clase de \((a,b)\).</li>
 
-<li>Consideremos el subgrupo de \(A=\mathbb{Z}\oplus \mathbb{Z}\) dado por \(B=\{a(-2,2)+b(2,4)\mid a,b\in \mathbb{Z}\}\). El cociente de \(A/B\) es:</li>
+<li><p>
+Consideremos el subgrupo de \(A=\mathbb{Z}\oplus \mathbb{Z}\) dado por \(B=\{a(-2,2)+b(2,4)\mid a,b\in \mathbb{Z}\}\). El cociente de \(A/B\) es: \(A/B=\{\overline{(0,0)},\overline{(0,1)},\overline{(-1,3)},\overline{(1,0)},\overline{(2,0)},\overline{(3,0)},\overline{(0,3)}\}\).
+</p>
+
+<p>
+¿ \((2,0)-(1,0)=(1,0)\in B\) ? ¿Existen \(a,b\in \mathbb{Z}\) tales que \((1,0)=a(-2,2)+b(2,4)\)?
+</p>
+
+<p>
+¿Existen \(x,y\in \mathbb{Z}\) tales que \(\overline{(x,y)}=\overline{(0,8)}\), donde \(x,y\) sean &ldquo;más sencillos&rdquo;.
+</p>
+
+<p>
+Tenemos que \(\overline{(2,0)}=\overline{(0,2)}\), pues \((2,-2)\in B\).
+</p></li>
 </ul>
