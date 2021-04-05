@@ -8,8 +8,8 @@ categories:
 ---
 
 
-<div id="outline-container-org0608189" class="outline-2">
-<h2 id="org0608189"><span class="section-number-2">1</span> Idea</h2>
+<div id="outline-container-org6f7884d" class="outline-2">
+<h2 id="org6f7884d"><span class="section-number-2">1</span> Idea</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Sea \(C\subseteq \mathbb{R}^{n}\) un conjunto finito. Una idea para estudiar \(C\) es asociarle un complejo simplicial, por ejemplo \(\mathcal{N}_{\epsilon}(C)\). Sabemos \(\mathcal{N}_{\epsilon}(C)\) es homotópico a la unión de las bolas con centros en puntos \(C\), con radio \(\epsilon\). Quisiéramos encontrar una manera de simplificar el tipo de homotopía de \(\mathcal{N}_{\epsilon}(C)\). En general, no se conoce un algoritmo que se pueda aplicar a todos los complejos simpliciales para calcular el tipo de homotopía, y que sea computacionalmente adecuado para complejos de muchos vértices.
@@ -21,12 +21,12 @@ La homología nos da una herramienta para determinar ciertos aspectos topológic
 </div>
 </div>
 
-<div id="outline-container-org3caf891" class="outline-2">
-<h2 id="org3caf891"><span class="section-number-2">2</span> Definiciones</h2>
+<div id="outline-container-orgd84b971" class="outline-2">
+<h2 id="orgd84b971"><span class="section-number-2">2</span> Definiciones</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org69303e0" class="outline-3">
-<h3 id="org69303e0"><span class="section-number-3">2.1</span> Permutaciones pares e impares</h3>
+<div id="outline-container-orgaf6c170" class="outline-3">
+<h3 id="orgaf6c170"><span class="section-number-3">2.1</span> Permutaciones pares e impares</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Una <b>permutación</b> es una función biyectiva \(f\colon\{1,2,\ldots,n\}\to\{1,2,\ldots,n\}\). Cada permutación se puede escribir como producto de ciclos. Por ejemplo, si \(n=6\), la permutación \((15)(346)\), es la función \(1\mapsto 5, 2\mapsto 2, 3\mapsto 4, 4\mapsto 6, 5\mapsto 1, 6\mapsto 3\). Una <b>transposición</b> es una permutación que intercambia dos números y a los demás los deja fijos, es decir una permutación que en notación cíclica se escribe \((ab)\). Toda permutación se puede escribir como producto de transposiciones. Por ejemplo \((15)(346)=(15)(34)(46)\).
@@ -46,8 +46,8 @@ Por ejemplo, la permutación \((15)(346)\) es impar. Un ciclo \((a_{1}a_{2}\cdot
 </div>
 </div>
 
-<div id="outline-container-orgc5dfacc" class="outline-3">
-<h3 id="orgc5dfacc"><span class="section-number-3">2.2</span> Simplejos orientados</h3>
+<div id="outline-container-orgd51fa77" class="outline-3">
+<h3 id="orgd51fa77"><span class="section-number-3">2.2</span> Simplejos orientados</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Sea \(\Delta\) un complejo simplicial. Supongamos que damos un orden total a los vértices de \(\Delta\). Un <b>\(p\)-simplejo ordenado</b> es \((v_{0},v_{1},\ldots,v_{p})\) tal que \(\{v_{0},v_{1},\ldots,v_{p}\}\) es un simplejo de dimensión \(p\) en \(\Delta\). Supongamos que \((w_{0},w_{1},\ldots,w_{p})\) es un \(p\)-simplejo ordenado tal que \(\{w_{0},w_{1},\ldots,w_{p}\}=\{v_{0},v_{1},\ldots,v_{p}\}\). Diremos que la orientación es la misma, si la permutación \(v_{i}\to w_{i}\) para \(i=0,1,\ldots,p\) es par. En caso contrario, diremos que los simplejos orientados tienen <b>orientación opuesta</b>.
@@ -55,7 +55,7 @@ Sea \(\Delta\) un complejo simplicial. Supongamos que damos un orden total a los
 </div>
 
 <ol class="org-ol">
-<li><a id="orgbd1af43"></a>Ejemplo<br />
+<li><a id="org2e3531e"></a>Ejemplo<br />
 <div class="outline-text-4" id="text-2-2-1">
 <p>
 Sea \(\Delta\) el complejo simplicial con caras maximales \(\{\{1,2,3\},\{3,4\},\{2,4\}\}\). Entonces:
@@ -68,7 +68,7 @@ Sea \(\Delta\) el complejo simplicial con caras maximales \(\{\{1,2,3\},\{3,4\},
 </div>
 </li>
 
-<li><a id="org0305f57"></a>Notación<br />
+<li><a id="orgfa148d3"></a>Notación<br />
 <div class="outline-text-4" id="text-2-2-2">
 <p>
 El simplejo orientado \((v_{0},v_{1},\ldots,v_{p})\) se denotará \(v_{0}\wedge v_{1}\wedge\cdots\wedge v_{n}\). (Debe interpretarse, que \(2\wedge 4= -4\wedge 2\), y \(1\wedge 2\wedge 3=3\wedge 1\wedge 2\)).
@@ -78,8 +78,8 @@ El simplejo orientado \((v_{0},v_{1},\ldots,v_{p})\) se denotará \(v_{0}\wedge 
 </ol>
 </div>
 
-<div id="outline-container-orgb00cff0" class="outline-3">
-<h3 id="orgb00cff0"><span class="section-number-3">2.3</span> Cadenas</h3>
+<div id="outline-container-org8c0c3a1" class="outline-3">
+<h3 id="org8c0c3a1"><span class="section-number-3">2.3</span> Cadenas</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 <b>Notación</b> Un simplejo \(\sigma\) cuando está orientado se denotará con \(\hat{\sigma}\).
@@ -106,8 +106,8 @@ Para determinar una 2-cadena, definamos \(c'(1\wedge 2\wedge 3)=1\). Esto determ
 </div>
 </div>
 
-<div id="outline-container-org03a01b5" class="outline-3">
-<h3 id="org03a01b5"><span class="section-number-3">2.4</span> Grupo de cadenas</h3>
+<div id="outline-container-orgf9624f9" class="outline-3">
+<h3 id="orgf9624f9"><span class="section-number-3">2.4</span> Grupo de cadenas</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 Si \(c\) y \(c'\) son dos \(p\)-cadenas, definimos \((c+c')(\hat{\sigma})=c(\hat{\sigma})+c'(\hat{\sigma})\). La colección de todas las \(p\)-cadenas \(C_{p}(\Delta,R)\) forma un grupo con esta operación. Más aún, si \(R\) es un campo, entonces a \(C_{p}(\Delta,R)\) se le puede dar estructura de un espacio vectorial.
@@ -119,8 +119,8 @@ Si \(p>\dim\Delta\), definimos \(C_{p}(\Delta,R)=0\) (el espacio cero).
 </div>
 </div>
 
-<div id="outline-container-orgafe82f3" class="outline-3">
-<h3 id="orgafe82f3"><span class="section-number-3">2.5</span> Cadenas elementales</h3>
+<div id="outline-container-org4916a67" class="outline-3">
+<h3 id="org4916a67"><span class="section-number-3">2.5</span> Cadenas elementales</h3>
 <div class="outline-text-3" id="text-2-5">
 <p>
 Cada \(p\)-simplejo orientado \(\hat{\sigma}\) determina una \(p\)-cadena, donde la \(p\)-cadena asociada a \(\hat{\sigma}\) se define como \(1\) en el simplejo orientado \(\hat{\sigma}\), \(-1\) en el simplejo orientado \(\hat{\sigma'}\) y 0 en los demás simplejos orientados. Tal cadena se llama una <b>\(p\)-cadena elemental</b>. La cadena elemental determinada por el simplejo orientado \(\hat{\sigma}\) se denotará con \(\hat{\sigma}\).
@@ -136,8 +136,8 @@ Se puede demostrar que si para cada \(p\)-simplejo escogemos una orientación, l
 </div>
 </div>
 
-<div id="outline-container-orgcdbbf89" class="outline-3">
-<h3 id="orgcdbbf89"><span class="section-number-3">2.6</span> Operadores frontera</h3>
+<div id="outline-container-org5715dab" class="outline-3">
+<h3 id="org5715dab"><span class="section-number-3">2.6</span> Operadores frontera</h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
 Sea \(\hat{\sigma}=v_{0}\wedge v_{1}\wedge\cdots\wedge v_{p}\) una \(p\)-cadena elemental. Definimos la <b>frontera</b> de \(\hat{\sigma}\) como:
@@ -173,8 +173,8 @@ Si \(\hat{\sigma}=v_{0}\in C_{0}(\Delta,R)\), definimos \(\partial_{0}(\hat{\sig
 </div>
 </div>
 
-<div id="outline-container-orge0ba5e3" class="outline-3">
-<h3 id="orge0ba5e3"><span class="section-number-3">2.7</span> Espacio de ciclos y espacio de fronteras.</h3>
+<div id="outline-container-orgf60610b" class="outline-3">
+<h3 id="orgf60610b"><span class="section-number-3">2.7</span> Espacio de ciclos y espacio de fronteras.</h3>
 <div class="outline-text-3" id="text-2-7">
 <p>
 <b>Definición</b> Para cada \(p\geq 0\), el <b>\(p\)-espacio de ciclos</b> \(Z_{p}(\Delta,R)\) es \(\ker\partial_{p}\). El <b>\(p\)-espacio de fronteras</b> \(B_{p}(\Delta,R)\) es \(\mathrm{im}\partial_{p+1}\). Nótese que ambos son subespacios de \(C_{p}(\Delta,R)\). Por el teorema anterior
@@ -188,8 +188,8 @@ B_{p}(\Delta,R) \leq Z_{p}(\Delta,R).
 </div>
 </div>
 
-<div id="outline-container-orgd426e10" class="outline-3">
-<h3 id="orgd426e10"><span class="section-number-3">2.8</span> Homología</h3>
+<div id="outline-container-org07b365a" class="outline-3">
+<h3 id="org07b365a"><span class="section-number-3">2.8</span> Homología</h3>
 <div class="outline-text-3" id="text-2-8">
 <p>
 Para \(p\geq 0\), la <b>\(p\)-homología (reducida)</b> de \(\Delta\) con coeficientes en \(R\) es el cociente \(Z_{p}(\Delta,R)/B_{p}(\Delta,R)\).

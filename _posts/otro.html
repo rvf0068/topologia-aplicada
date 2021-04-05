@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Más cálculos de homología
+title: Otro cálculo de homología
 date: 2021-03-18 15:00 -0500 
 comments: true
 published: true
@@ -12,14 +12,14 @@ Consideremos el complejo simplicial \(\Delta\) cuyo conjunto de caras maximales 
 </p>
 
 
-<div id="org5aeeceb" class="figure">
+<div id="orgd122709" class="figure">
 <p><img src="{{ site.baseurl }}/images/tercero-ejemplo.png" alt="tercero-ejemplo" width="400" align="center" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Ejemplo <div id="tercero-ejemplo"></div></p>
 </div>
 
-<div id="outline-container-orgdb9ac42" class="outline-2">
-<h2 id="orgdb9ac42"><span class="section-number-2">1</span> Cálculo de \(H_{0}\)</h2>
+<div id="outline-container-org3eacdb5" class="outline-2">
+<h2 id="org3eacdb5"><span class="section-number-2">1</span> Cálculo de \(H_{0}\)</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Calculemos \(H_{0}(\Delta, R)=Z_{0}(\Delta,R)/B_{0}(\Delta,R)\). En este caso \(Z_{0}(\Delta,R)=\ker\partial_{0}\), donde \(\partial_{0}\colon C_{0}(\Delta,R)\to C_{-1}(\Delta,R)=R\). La matriz (respecto a las bases usuales) de \(\partial_{0}\) es \((1 1 1 1)\). Un conjunto de generadores del espacio nulo de esta matriz es \( \{(1,-1,0,0), (1,0,-1,0), (1,0,0,-1)\}\), y esos vectores se corresponden con \(a-b, a-c, a-d\).
@@ -31,15 +31,15 @@ Calculemos \(B_{0}(\Delta,R)\), es decir, la imagen de \(\partial_{1}\colon C_{1
 </div>
 </div>
 
-<div id="outline-container-orgcd8f5b3" class="outline-2">
-<h2 id="orgcd8f5b3"><span class="section-number-2">2</span> Cálculo de \(H_{1}\)</h2>
+<div id="outline-container-org9d20d59" class="outline-2">
+<h2 id="org9d20d59"><span class="section-number-2">2</span> Cálculo de \(H_{1}\)</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Calculemos \(H_{1}(\Delta, R)=Z_{1}(\Delta,R)/B_{1}(\Delta,R)\). Consideremos la frontera \(\partial_{1}\colon C_{1}(\Delta,R)\to C_{0}(\Delta,R)\). En las bases dadas por las cadenas elementales, esa transformación lineal tiene matriz:
 </p>
 
 
-<div id="org3d0b1c0" class="figure">
+<div id="org7bd023b" class="figure">
 <p><img src="{{ site.baseurl }}/images/otra-matriz-delta-1.png" alt="otra-matriz-delta-1" width="600" align="center" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Matriz de \(\partial_{1}\) <div id="otra-matriz-delta-1"></div></p>
@@ -54,7 +54,7 @@ El espacio \(B_{1}(\Delta,R)\) es la imagen de la frontera \(\partial_{2}\colon 
 </p>
 
 
-<div id="org06bb163" class="figure">
+<div id="org43e7e7f" class="figure">
 <p><img src="{{ site.baseurl }}/images/otra-matriz-delta-2.png" alt="otra-matriz-delta-2" width="300" align="center" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Matriz de \(\partial_{2}\) <div id="otra-matriz-delta-2"></div></p>
@@ -81,8 +81,8 @@ Como sus dos generadores son \(\overline{0}\), se obtiene que \(H_{1}(\Delta,R)\
 </div>
 </div>
 
-<div id="outline-container-org8422a8a" class="outline-2">
-<h2 id="org8422a8a"><span class="section-number-2">3</span> Cálculo de \(H_{2}\)</h2>
+<div id="outline-container-org4718912" class="outline-2">
+<h2 id="org4718912"><span class="section-number-2">3</span> Cálculo de \(H_{2}\)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Calculemos \(H_{2}(\Delta, R)=Z_{2}(\Delta,R)/B_{2}(\Delta,R)\). En este caso \(Z_{2}(\Delta,R)=\ker\partial_{2}=0\). Además \(B_{2}(\Delta,R)\) es la imagen de \(\partial_{3}\colon C_{3}(\Delta,R)\to C_{2}(\Delta,R)\), por lo que \(B_{2}(\Delta,R)=0\) (pues \(C_{3}(\Delta,R)=0\)). Por lo tanto \(H_{2}(\Delta,R)=0\).
@@ -90,8 +90,8 @@ Calculemos \(H_{2}(\Delta, R)=Z_{2}(\Delta,R)/B_{2}(\Delta,R)\). En este caso \(
 </div>
 </div>
 
-<div id="outline-container-orge2053e5" class="outline-2">
-<h2 id="orge2053e5"><span class="section-number-2">4</span> Resumen</h2>
+<div id="outline-container-orge21c736" class="outline-2">
+<h2 id="orge21c736"><span class="section-number-2">4</span> Resumen</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 \(H_{p}(\Delta,R)=0\) para todo \(p\geq0\).
@@ -99,8 +99,8 @@ Calculemos \(H_{2}(\Delta, R)=Z_{2}(\Delta,R)/B_{2}(\Delta,R)\). En este caso \(
 </div>
 </div>
 
-<div id="outline-container-orga3fc966" class="outline-2">
-<h2 id="orga3fc966"><span class="section-number-2">5</span> Teorema de invariancia de homotopía</h2>
+<div id="outline-container-orgdec3148" class="outline-2">
+<h2 id="orgdec3148"><span class="section-number-2">5</span> Teorema de invariancia de homotopía</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 <b>Teorema</b> Sean \(\Delta_{1}\) y \(\Delta_{2}\) complejos simpliciales tales que \(|\Delta_{1}|\simeq |\Delta_{2}|\). Entonces \(H_{p}(\Delta_{1},R)\cong H_{p}(\Delta_{2},R)\) para todo \(p\geq0\).

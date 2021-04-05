@@ -1,0 +1,61 @@
+---
+layout: post
+title: 
+date:  
+comments: true
+published: true
+categories: 
+---
+
+{% highlight python %}
+from sympy import Matrix
+A=Matrix([[-1,-1,-1, 0, 0, 0],
+          [ 1, 0, 0,-1,-1, 0],
+          [ 0, 1, 0, 1, 0,-1],
+          [ 0, 0, 1, 0, 1, 1]])
+A.nullspace()
+{% endhighlight %}
+<p>
+[Matrix([
+[ 1],
+[-1],
+[ 0],
+[ 1],
+[ 0],
+[ 0]]), Matrix([
+[ 1],
+[ 0],
+[-1],
+[ 0],
+[ 1],
+[ 0]]), Matrix([
+[ 0],
+[ 1],
+[-1],
+[ 0],
+[ 0],
+[ 1]])]
+</p>
+
+{% highlight python %}
+from sympy import Matrix
+A=Matrix([[ 1, 1, 0, 0],
+          [-1, 0, 1, 0],
+          [ 0,-1,-1, 0],
+          [ 1, 0, 0, 1],
+          [ 0, 1, 0,-1],
+          [ 0, 0, 1, 1]])
+A.nullspace()
+{% endhighlight %}
+<p>
+[Matrix([
+[-1],
+[ 1],
+[-1],
+[ 1]])]
+</p>
+
+
+<p>
+∧ ∂
+</p>

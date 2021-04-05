@@ -1,0 +1,32 @@
+---
+layout: post
+title: Homología del plano proyectivo
+date: 2021-03-25 15:00 -0500 
+comments: true
+published: true
+categories: 
+---
+
+<p>
+Consideremos el siguiente complejo simplicial \(\Delta\):
+</p>
+
+
+<div id="org1d03790" class="figure">
+<p><img src="{{ site.baseurl }}/images/plano-proyectivo.png" alt="plano-proyectivo" width="400" align="center" />
+</p>
+</div>
+
+
+<p>
+En el plano projectivo tenemos:
+</p>
+<ul class="org-ul">
+<li>6 0-simplejos</li>
+<li>15 1-simplejos</li>
+<li>10 2-simplejos</li>
+</ul>
+
+<p>
+En este caso, se tiene que \(z=ab+bc+ca\in Z_{1}(\Delta, R)\). Se puede demostrar que \(\overline{z}\) genera a \(H_{1}(\Delta, R)\). Pero además se tiene que \(z+z=2z\) es una frontera. Es decir, en \(H_{1}(\Delta, R)\) se tiene que \(2\overline{z}=0\). Si \(R\) es un campo de entre \(\mathbb{C}\), \(\mathbb{R}\) o \(\mathbb{Q}\), entonces se tiene que \(\overline{z}=0\) y por lo tanto \(H_{1}(\Delta,R)=0\) en ese caso. Sin embargo, si \(R=\mathbb{F}_{2}\) o si \(R=\mathbb{Z}\), no es posible dividir entre \(2\). Entonces, tenemos por ejemplo, que \(H_{1}(\Delta,\mathbb{Z})\cong \mathbb{Z}/2\mathbb{Z}\). En este caso, como el elemento \(\overline{z}\), es diferente de cero, pero tiene orden finito, se dice que es un elemento de <b>torsión</b> en \(H_{1}(\Delta, \mathbb{Z})\). 
+</p>

@@ -1,0 +1,59 @@
+---
+layout: post
+title: Homología del toro
+date: 2021-03-23 15:00 -0500 
+comments: true
+published: true
+categories: 
+---
+
+<p>
+Consideremos el complejo simplicial \(\Delta\).
+</p>
+
+
+<div id="org5a38417" class="figure">
+<p><img src="{{ site.baseurl }}/images/./toro.png" alt="toro.png" />
+</p>
+</div>
+
+<p>
+Hay 9 0-simplejos, por lo tanto \(C_{0}(\Delta,R)=\langle A,B,C,D,E,F,G,H,I\rangle\). Tenemos que \(\dim C_{1}(\Delta,R)=27\), y \(\dim C_{2}(\Delta,R)=18\). 
+</p>
+
+<p>
+Observemos que \(A\wedge B+B\wedge C+C\wedge A\in Z_{1}(\Delta,R)\),
+pues \(\partial_{1}(A\wedge B+B\wedge C+C\wedge A)=B-A+(C-B)+(A-C)=0\).
+</p>
+
+<p>
+(En adelante, escribiremos las cadenas elementales sin el símbolo \(\wedge\))
+</p>
+
+<p>
+También \(DE+EF+FD\in Z_{1}(\Delta,R)\).
+</p>
+
+<p>
+Consideremos \(\partial_{2}(ABD+BED+BCE+CFE+AFC+ADF)\). Esto es igual a:
+</p>
+
+\begin{multline}
+\label{eq:1}
+BD - AD + AB + ED - BD + BE + CE - BE + BC\\
++ FE - CE + CF + FC - AC + AF + DF - AF + AD\\
+ = AB + ED + BC + FE  - AC + DF\\
+ = AB + BC + CA - DE - EF - FD 
+\end{multline}
+
+<p>
+La diferencia del ciclo \(AB+BC+CA\) con el ciclo \(DE+EF+FD\) es entonces una frontera. Se dice que tales ciclos son <b>homólogos</b>. Nótese que si dos ciclos son homólogos, entonces representan la misma clase en \(H_{1}(\Delta, R)\).
+</p>
+
+<p>
+Similarmente \(AD+DG+GA\in Z_{1}(\Delta, R)\). Se puede demostrar que representa una clase diferente a la de \(AB+BC+CA\) en \(H_{1}(\Delta,R)\).
+</p>
+
+<p>
+Consideremos ahora \(AF+FH+HA\). Es también un ciclo, pues \(\partial_{1}(AF+FH+HA)=F-A+H-F+A-H=0\). Sin embargo, en este caso no representa una clase diferente, pues se puede demostrar que es homólogo a la suma de los dos ciclos mencionados anteriormente. 
+</p>
