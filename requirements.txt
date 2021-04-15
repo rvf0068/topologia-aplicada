@@ -1,4 +1,6 @@
 networkx
 matplotlib
+numpy
 scipy
 mogutda
+git+https://github.com/rvf0068/pycliques
