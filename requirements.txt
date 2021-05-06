@@ -3,4 +3,6 @@ matplotlib
 numpy
 scipy
 mogutda
+ripser
+persim
 git+https://github.com/rvf0068/pycliques
